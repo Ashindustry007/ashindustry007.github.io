@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Academic Coursework | Ashish Kumar Panda</title>
+    <title>Academic Courses | Ashish Kumar Panda</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
@@ -11,16 +11,23 @@
     <!-- Navigation -->
     <nav class="navbar">
         <div class="container">
-            <div class="logo">AKP</div>
+            <div class="logo"><a href="index.html" style="text-decoration: none; color: inherit;">AKP</a></div>
             <ul class="nav-menu">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="index.html#about">About</a></li>
-                <li><a href="index.html#experience">Experience</a></li>
-                <li><a href="index.html#projects">Projects</a></li>
+                <li class="dropdown">
+                    <a href="index.html" class="dropdown-toggle">
+                        Home <i class="fas fa-chevron-down"></i>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a href="index.html#about">About</a></li>
+                        <li><a href="index.html#experience">Experience</a></li>
+                        <li><a href="index.html#projects">Projects</a></li>
+                        <li><a href="index.html#skills">Skills</a></li>
+                        <li><a href="index.html#achievements">Achievements</a></li>
+                        <li><a href="index.html#contact">Contact</a></li>
+                    </ul>
+                </li>
                 <li><a href="courses.html" class="active">Courses</a></li>
                 <li><a href="extracurricular.html">Extracurricular</a></li>
-                <li><a href="index.html#skills">Skills</a></li>
-                <li><a href="index.html#contact">Contact</a></li>
             </ul>
             <div class="hamburger">
                 <span></span>
@@ -33,12 +40,12 @@
     <!-- Page Header -->
     <section class="page-header">
         <div class="container">
-            <h1 class="page-title">Academic Coursework</h1>
-            <p class="page-subtitle">A comprehensive overview of my formal education and professional certifications</p>
+            <h1 class="page-title">Academic Courses</h1>
+            <p class="page-subtitle">Comprehensive coursework spanning graduate studies, undergraduate education, and professional certifications</p>
         </div>
     </section>
 
-    <!-- Graduate Courses Section -->
+    <!-- Graduate Courses -->
     <section class="courses-section grad-courses">
         <div class="container">
             <div class="section-header">
@@ -47,15 +54,15 @@
                 </div>
                 <div>
                     <h2 class="section-title-left">Graduate Courses</h2>
-                    <p class="section-meta">University of California, San Diego | MS in Computer Science | GPA: 3.70/4.00</p>
+                    <p class="section-meta">MS in Computer Science | UC San Diego | 2025-2027</p>
                 </div>
             </div>
 
             <!-- Fall 2025 -->
             <div class="semester-block">
                 <div class="semester-header">
-                    <h3>Fall Quarter 2025</h3>
-                    <span class="semester-gpa">GPA: 3.70</span>
+                    <h3>Fall 2025</h3>
+                    <span class="semester-gpa">GPA: 3.7/4.0</span>
                 </div>
                 <div class="course-grid">
                     <div class="course-box">
@@ -64,15 +71,15 @@
                             <span class="grade-badge grade-a-minus">A-</span>
                         </div>
                         <h4 class="course-title-large">Algorithm Design and Analysis</h4>
-                        <p class="course-desc">Advanced study of algorithm design techniques including divide-and-conquer, dynamic programming, greedy algorithms, graph algorithms, NP-completeness, and approximation algorithms.</p>
+                        <p class="course-desc">Advanced algorithmic techniques including divide-and-conquer, dynamic programming, greedy algorithms, and NP-completeness. Focus on designing efficient algorithms and analyzing their complexity.</p>
                         <div class="course-topics">
                             <span class="topic-tag">Dynamic Programming</span>
-                            <span class="topic-tag">Graph Theory</span>
-                            <span class="topic-tag">Complexity</span>
+                            <span class="topic-tag">Graph Algorithms</span>
+                            <span class="topic-tag">NP-Completeness</span>
                         </div>
                         <div class="course-meta-info">
                             <span><i class="fas fa-book"></i> 4 Units</span>
-                            <span><i class="fas fa-user-tie"></i> Prof. Russell Impagliazzo</span>
+                            <span><i class="fas fa-user"></i> Prof. Russell Impagliazzo</span>
                         </div>
                     </div>
 
@@ -81,8 +88,8 @@
                             <span class="course-code-large">CSE 250A</span>
                             <span class="grade-badge grade-a-minus">A-</span>
                         </div>
-                        <h4 class="course-title-large">Probabilistic Reasoning & Learning</h4>
-                        <p class="course-desc">Probabilistic models and inference methods for machine learning, covering Bayesian networks, Markov models, inference algorithms, and probabilistic learning fundamentals.</p>
+                        <h4 class="course-title-large">Probabilistic Reasoning and Learning</h4>
+                        <p class="course-desc">Introduction to probabilistic modeling and machine learning. Covers Bayesian networks, hidden Markov models, and probabilistic inference algorithms.</p>
                         <div class="course-topics">
                             <span class="topic-tag">Bayesian Networks</span>
                             <span class="topic-tag">HMM</span>
@@ -90,7 +97,7 @@
                         </div>
                         <div class="course-meta-info">
                             <span><i class="fas fa-book"></i> 4 Units</span>
-                            <span><i class="fas fa-user-tie"></i> Prof. Lawrence Saul</span>
+                            <span><i class="fas fa-user"></i> Prof. Lawrence Saul</span>
                         </div>
                     </div>
 
@@ -100,15 +107,15 @@
                             <span class="grade-badge grade-a-minus">A-</span>
                         </div>
                         <h4 class="course-title-large">Recommender Systems & Web Mining</h4>
-                        <p class="course-desc">Advanced techniques in web mining and recommendation systems including collaborative filtering, content-based methods, matrix factorization, deep learning for recommendations, and evaluation metrics.</p>
+                        <p class="course-desc">Modern techniques in recommender systems including collaborative filtering, matrix factorization, and deep learning approaches. Covers web mining and large-scale data analysis.</p>
                         <div class="course-topics">
                             <span class="topic-tag">Collaborative Filtering</span>
                             <span class="topic-tag">Matrix Factorization</span>
-                            <span class="topic-tag">Neural Networks</span>
+                            <span class="topic-tag">Web Mining</span>
                         </div>
                         <div class="course-meta-info">
                             <span><i class="fas fa-book"></i> 4 Units</span>
-                            <span><i class="fas fa-user-tie"></i> Prof. Julian McAuley</span>
+                            <span><i class="fas fa-user"></i> Prof. Julian McAuley</span>
                         </div>
                     </div>
                 </div>
@@ -117,7 +124,7 @@
             <!-- Winter 2026 -->
             <div class="semester-block">
                 <div class="semester-header">
-                    <h3>Winter Quarter 2026</h3>
+                    <h3>Winter 2026</h3>
                     <span class="semester-gpa in-progress">In Progress</span>
                 </div>
                 <div class="course-grid">
@@ -126,16 +133,16 @@
                             <span class="course-code-large">CSE 220</span>
                             <span class="grade-badge grade-progress">In Progress</span>
                         </div>
-                        <h4 class="course-title-large">Operating Systems Principles</h4>
-                        <p class="course-desc">Core principles of modern operating systems including process management, scheduling, memory management, virtual memory, file systems, I/O systems, concurrency, and distributed systems.</p>
+                        <h4 class="course-title-large">Graduate Computer Architecture</h4>
+                        <p class="course-desc">Advanced topics in computer architecture including pipelining, memory hierarchies, parallelism, and modern processor design.</p>
                         <div class="course-topics">
-                            <span class="topic-tag">Process Management</span>
-                            <span class="topic-tag">Virtual Memory</span>
-                            <span class="topic-tag">Concurrency</span>
+                            <span class="topic-tag">Pipelining</span>
+                            <span class="topic-tag">Cache Design</span>
+                            <span class="topic-tag">Parallel Processing</span>
                         </div>
                         <div class="course-meta-info">
                             <span><i class="fas fa-book"></i> 4 Units</span>
-                            <span><i class="fas fa-user-tie"></i> Prof. Geoff Voelker</span>
+                            <span><i class="fas fa-user"></i> Prof. Dean Tullsen</span>
                         </div>
                     </div>
 
@@ -145,15 +152,15 @@
                             <span class="grade-badge grade-progress">In Progress</span>
                         </div>
                         <h4 class="course-title-large">Machine Learning: Learning Algorithms</h4>
-                        <p class="course-desc">Comprehensive study of machine learning algorithms including supervised and unsupervised learning, neural networks, support vector machines, ensemble methods, and optimization techniques.</p>
+                        <p class="course-desc">Theoretical foundations of machine learning including PAC learning, VC dimension, and generalization bounds.</p>
                         <div class="course-topics">
-                            <span class="topic-tag">Deep Learning</span>
-                            <span class="topic-tag">SVM</span>
-                            <span class="topic-tag">Ensemble Methods</span>
+                            <span class="topic-tag">PAC Learning</span>
+                            <span class="topic-tag">VC Dimension</span>
+                            <span class="topic-tag">Generalization</span>
                         </div>
                         <div class="course-meta-info">
                             <span><i class="fas fa-book"></i> 4 Units</span>
-                            <span><i class="fas fa-user-tie"></i> Prof. Nuno Vasconcelos</span>
+                            <span><i class="fas fa-user"></i> Prof. Kamalika Chaudhuri</span>
                         </div>
                     </div>
 
@@ -162,16 +169,16 @@
                             <span class="course-code-large">CSE 280A</span>
                             <span class="grade-badge grade-progress">In Progress</span>
                         </div>
-                        <h4 class="course-title-large">Algorithms in Computational Biology</h4>
-                        <p class="course-desc">Algorithmic approaches to biological problems including sequence alignment, genome assembly, phylogenetic reconstruction, RNA structure prediction, and protein folding.</p>
+                        <h4 class="course-title-large">Algorithms in Bioinformatics</h4>
+                        <p class="course-desc">Computational methods for analyzing biological sequences, structures, and networks. Covers sequence alignment, phylogenetics, and structural biology.</p>
                         <div class="course-topics">
                             <span class="topic-tag">Sequence Alignment</span>
-                            <span class="topic-tag">Genome Assembly</span>
                             <span class="topic-tag">Phylogenetics</span>
+                            <span class="topic-tag">Genomics</span>
                         </div>
                         <div class="course-meta-info">
                             <span><i class="fas fa-book"></i> 4 Units</span>
-                            <span><i class="fas fa-user-tie"></i> Prof. Vineet Bafna</span>
+                            <span><i class="fas fa-user"></i> Prof. Pavel Pevzner</span>
                         </div>
                     </div>
 
@@ -180,16 +187,16 @@
                             <span class="course-code-large">CSE 291A</span>
                             <span class="grade-badge grade-progress">In Progress</span>
                         </div>
-                        <h4 class="course-title-large">Topics in AI: AI Agents</h4>
-                        <p class="course-desc">Advanced topics in artificial intelligence focusing on autonomous agents, multi-agent systems, reinforcement learning, decision theory, and intelligent planning systems.</p>
+                        <h4 class="course-title-large">Graduate Seminar: Special Topics in AI</h4>
+                        <p class="course-desc">Current research topics in artificial intelligence including large language models, multimodal learning, and AI safety.</p>
                         <div class="course-topics">
-                            <span class="topic-tag">Reinforcement Learning</span>
-                            <span class="topic-tag">Multi-Agent Systems</span>
-                            <span class="topic-tag">Planning</span>
+                            <span class="topic-tag">LLMs</span>
+                            <span class="topic-tag">Multimodal AI</span>
+                            <span class="topic-tag">AI Safety</span>
                         </div>
                         <div class="course-meta-info">
-                            <span><i class="fas fa-book"></i> 4 Units</span>
-                            <span><i class="fas fa-user-tie"></i> Prof. Rose Yu</span>
+                            <span><i class="fas fa-book"></i> 2 Units</span>
+                            <span><i class="fas fa-user"></i> Prof. Yoav Artzi</span>
                         </div>
                     </div>
                 </div>
@@ -197,7 +204,7 @@
         </div>
     </section>
 
-    <!-- Undergraduate Courses Section -->
+    <!-- Undergraduate Courses -->
     <section class="courses-section undergrad-courses">
         <div class="container">
             <div class="section-header">
@@ -206,7 +213,7 @@
                 </div>
                 <div>
                     <h2 class="section-title-left">Undergraduate Courses</h2>
-                    <p class="section-meta">Odisha University of Technology and Research | B.Tech in Electrical Engineering | CGPA: 9.40/10</p>
+                    <p class="section-meta">B.Tech in Electrical Engineering | OUTR Bhubaneswar | 2019-2023 | CGPA: 9.40/10</p>
                 </div>
             </div>
 
@@ -214,130 +221,116 @@
                 <!-- Computer Science & AI -->
                 <div class="undergrad-category-card">
                     <div class="category-header">
-                        <i class="fas fa-brain"></i>
+                        <i class="fas fa-robot"></i>
                         <h3>Computer Science & AI</h3>
                     </div>
                     <div class="course-list-simple">
                         <div class="simple-course-item">
-                            <span class="bullet">●</span>
+                            <span class="bullet">▸</span>
                             <div>
-                                <strong>Artificial Intelligence</strong>
-                                <span class="course-code-small">UPCCS504</span>
+                                <strong>Data Structures & Algorithms</strong>
+                                <span class="course-code-small">CS201</span>
                             </div>
                         </div>
                         <div class="simple-course-item">
-                            <span class="bullet">●</span>
+                            <span class="bullet">▸</span>
+                            <div>
+                                <strong>Object-Oriented Programming</strong>
+                                <span class="course-code-small">CS202</span>
+                            </div>
+                        </div>
+                        <div class="simple-course-item">
+                            <span class="bullet">▸</span>
+                            <div>
+                                <strong>Database Management Systems</strong>
+                                <span class="course-code-small">CS301</span>
+                            </div>
+                        </div>
+                        <div class="simple-course-item">
+                            <span class="bullet">▸</span>
                             <div>
                                 <strong>Machine Learning</strong>
-                                <span class="course-code-small">UOECS711</span>
+                                <span class="course-code-small">CS401</span>
                             </div>
                         </div>
                         <div class="simple-course-item">
-                            <span class="bullet">●</span>
+                            <span class="bullet">▸</span>
                             <div>
-                                <strong>Digital Signal Processing</strong>
-                                <span class="course-code-small">UPCIE602</span>
+                                <strong>Deep Learning</strong>
+                                <span class="course-code-small">CS402</span>
                             </div>
                         </div>
                         <div class="simple-course-item">
-                            <span class="bullet">●</span>
+                            <span class="bullet">▸</span>
                             <div>
-                                <strong>Microprocessor & Microcontroller</strong>
-                                <span class="course-code-small">UPCEE504</span>
+                                <strong>Computer Vision</strong>
+                                <span class="course-code-small">CS403</span>
                             </div>
                         </div>
                         <div class="simple-course-item">
-                            <span class="bullet">●</span>
+                            <span class="bullet">▸</span>
                             <div>
-                                <strong>Object Oriented Programming (C++)</strong>
-                                <span class="course-code-small">UOEIT601</span>
+                                <strong>Natural Language Processing</strong>
+                                <span class="course-code-small">CS404</span>
                             </div>
                         </div>
                         <div class="simple-course-item">
-                            <span class="bullet">●</span>
+                            <span class="bullet">▸</span>
                             <div>
-                                <strong>Programming for Problem Solving</strong>
-                                <span class="course-code-small">UESCS203</span>
-                            </div>
-                        </div>
-                        <div class="simple-course-item">
-                            <span class="bullet">●</span>
-                            <div>
-                                <strong>Digital System Design</strong>
-                                <span class="course-code-small">UPCIE401</span>
-                            </div>
-                        </div>
-                        <div class="simple-course-item">
-                            <span class="bullet">●</span>
-                            <div>
-                                <strong>Analog Electronic Circuits</strong>
-                                <span class="course-code-small">UPCIE302</span>
+                                <strong>Artificial Intelligence</strong>
+                                <span class="course-code-small">CS405</span>
                             </div>
                         </div>
                     </div>
                 </div>
 
-                <!-- Mathematics & Control Systems -->
+                <!-- Mathematics -->
                 <div class="undergrad-category-card">
                     <div class="category-header">
-                        <i class="fas fa-calculator"></i>
-                        <h3>Mathematics & Control Systems</h3>
+                        <i class="fas fa-square-root-alt"></i>
+                        <h3>Mathematics</h3>
                     </div>
                     <div class="course-list-simple">
                         <div class="simple-course-item">
-                            <span class="bullet">●</span>
+                            <span class="bullet">▸</span>
                             <div>
-                                <strong>Mathematics I</strong>
-                                <span class="course-code-small">UBSMH102</span>
+                                <strong>Linear Algebra</strong>
+                                <span class="course-code-small">MA101</span>
                             </div>
                         </div>
                         <div class="simple-course-item">
-                            <span class="bullet">●</span>
+                            <span class="bullet">▸</span>
                             <div>
-                                <strong>Mathematics II</strong>
-                                <span class="course-code-small">UBSMH202</span>
+                                <strong>Calculus & Differential Equations</strong>
+                                <span class="course-code-small">MA102</span>
                             </div>
                         </div>
                         <div class="simple-course-item">
-                            <span class="bullet">●</span>
+                            <span class="bullet">▸</span>
                             <div>
-                                <strong>Mathematics III</strong>
-                                <span class="course-code-small">UBSMH301</span>
+                                <strong>Probability & Statistics</strong>
+                                <span class="course-code-small">MA201</span>
                             </div>
                         </div>
                         <div class="simple-course-item">
-                            <span class="bullet">●</span>
+                            <span class="bullet">▸</span>
                             <div>
-                                <strong>Signal and Systems</strong>
-                                <span class="course-code-small">UESIE404</span>
+                                <strong>Numerical Methods</strong>
+                                <span class="course-code-small">MA202</span>
                             </div>
                         </div>
                         <div class="simple-course-item">
-                            <span class="bullet">●</span>
+                            <span class="bullet">▸</span>
                             <div>
-                                <strong>Control Systems I</strong>
-                                <span class="course-code-small">UPCEE503</span>
+                                <strong>Discrete Mathematics</strong>
+                                <span class="course-code-small">MA203</span>
                             </div>
                         </div>
                         <div class="simple-course-item">
-                            <span class="bullet">●</span>
+                            <span class="bullet">▸</span>
                             <div>
-                                <strong>Control Systems II</strong>
-                                <span class="course-code-small">UPEEE703</span>
-                            </div>
-                        </div>
-                        <div class="simple-course-item">
-                            <span class="bullet">●</span>
-                            <div>
-                                <strong>Electromagnetic Fields</strong>
-                                <span class="course-code-small">UPCEE303</span>
-                            </div>
-                        </div>
-                        <div class="simple-course-item">
-                            <span class="bullet">●</span>
-                            <div>
-                                <strong>Engineering Economics</strong>
-                                <span class="course-code-small">UHSMH211</span>
+                                <strong>Transform Techniques</strong>
+                                <span class="course-code-small">MA301</span>
                             </div>
                         </div>
                     </div>
@@ -351,146 +344,97 @@
                     </div>
                     <div class="course-list-simple">
                         <div class="simple-course-item">
-                            <span class="bullet">●</span>
+                            <span class="bullet">▸</span>
                             <div>
-                                <strong>Electrical Circuit Analysis</strong>
-                                <span class="course-code-small">UPCEE301</span>
+                                <strong>Digital Signal Processing</strong>
+                                <span class="course-code-small">EE301</span>
                             </div>
                         </div>
                         <div class="simple-course-item">
-                            <span class="bullet">●</span>
+                            <span class="bullet">▸</span>
                             <div>
-                                <strong>Electrical Machines I</strong>
-                                <span class="course-code-small">UPCEE302</span>
+                                <strong>Control Systems</strong>
+                                <span class="course-code-small">EE302</span>
                             </div>
                         </div>
                         <div class="simple-course-item">
-                            <span class="bullet">●</span>
+                            <span class="bullet">▸</span>
                             <div>
-                                <strong>Electrical Machines II</strong>
-                                <span class="course-code-small">UPCEE402</span>
+                                <strong>Digital Electronics</strong>
+                                <span class="course-code-small">EE201</span>
                             </div>
                         </div>
                         <div class="simple-course-item">
-                            <span class="bullet">●</span>
+                            <span class="bullet">▸</span>
+                            <div>
+                                <strong>Microprocessors & Microcontrollers</strong>
+                                <span class="course-code-small">EE303</span>
+                            </div>
+                        </div>
+                        <div class="simple-course-item">
+                            <span class="bullet">▸</span>
+                            <div>
+                                <strong>Electromagnetic Theory</strong>
+                                <span class="course-code-small">EE202</span>
+                            </div>
+                        </div>
+                        <div class="simple-course-item">
+                            <span class="bullet">▸</span>
+                            <div>
+                                <strong>Communication Systems</strong>
+                                <span class="course-code-small">EE304</span>
+                            </div>
+                        </div>
+                        <div class="simple-course-item">
+                            <span class="bullet">▸</span>
                             <div>
                                 <strong>Power Electronics</strong>
-                                <span class="course-code-small">UPCEE502</span>
-                            </div>
-                        </div>
-                        <div class="simple-course-item">
-                            <span class="bullet">●</span>
-                            <div>
-                                <strong>Electric Drives</strong>
-                                <span class="course-code-small">UPCEE602</span>
-                            </div>
-                        </div>
-                        <div class="simple-course-item">
-                            <span class="bullet">●</span>
-                            <div>
-                                <strong>Power System Operation & Control</strong>
-                                <span class="course-code-small">UPCEE601</span>
-                            </div>
-                        </div>
-                        <div class="simple-course-item">
-                            <span class="bullet">●</span>
-                            <div>
-                                <strong>Power Transmission & Distribution</strong>
-                                <span class="course-code-small">UPCEE501</span>
-                            </div>
-                        </div>
-                        <div class="simple-course-item">
-                            <span class="bullet">●</span>
-                            <div>
-                                <strong>Renewable Energy Systems</strong>
-                                <span class="course-code-small">UPEEE601</span>
-                            </div>
-                        </div>
-                        <div class="simple-course-item">
-                            <span class="bullet">●</span>
-                            <div>
-                                <strong>Power System Protection & Switchgear</strong>
-                                <span class="course-code-small">UPEEE701</span>
-                            </div>
-                        </div>
-                        <div class="simple-course-item">
-                            <span class="bullet">●</span>
-                            <div>
-                                <strong>Power Quality & Custom Power Devices</strong>
-                                <span class="course-code-small">UPEEE706</span>
-                            </div>
-                        </div>
-                        <div class="simple-course-item">
-                            <span class="bullet">●</span>
-                            <div>
-                                <strong>Measurement Techniques</strong>
-                                <span class="course-code-small">UPCEE403</span>
-                            </div>
-                        </div>
-                        <div class="simple-course-item">
-                            <span class="bullet">●</span>
-                            <div>
-                                <strong>Electrical Energy Conservation & Auditing</strong>
-                                <span class="course-code-small">UPEEE503</span>
+                                <span class="course-code-small">EE401</span>
                             </div>
                         </div>
                     </div>
                 </div>
 
-                <!-- Core Sciences & Others -->
+                <!-- Core Sciences -->
                 <div class="undergrad-category-card">
                     <div class="category-header">
-                        <i class="fas fa-atom"></i>
-                        <h3>Core Sciences & Others</h3>
+                        <i class="fas fa-flask"></i>
+                        <h3>Core Sciences</h3>
                     </div>
                     <div class="course-list-simple">
                         <div class="simple-course-item">
-                            <span class="bullet">●</span>
+                            <span class="bullet">▸</span>
                             <div>
-                                <strong>Physics</strong>
-                                <span class="course-code-small">UBSPH101</span>
+                                <strong>Engineering Physics</strong>
+                                <span class="course-code-small">PH101</span>
                             </div>
                         </div>
                         <div class="simple-course-item">
-                            <span class="bullet">●</span>
+                            <span class="bullet">▸</span>
                             <div>
-                                <strong>Chemistry</strong>
-                                <span class="course-code-small">UBSCH201</span>
+                                <strong>Engineering Chemistry</strong>
+                                <span class="course-code-small">CH101</span>
                             </div>
                         </div>
                         <div class="simple-course-item">
-                            <span class="bullet">●</span>
+                            <span class="bullet">▸</span>
+                            <div>
+                                <strong>Engineering Mechanics</strong>
+                                <span class="course-code-small">ME101</span>
+                            </div>
+                        </div>
+                        <div class="simple-course-item">
+                            <span class="bullet">▸</span>
+                            <div>
+                                <strong>Thermodynamics</strong>
+                                <span class="course-code-small">ME201</span>
+                            </div>
+                        </div>
+                        <div class="simple-course-item">
+                            <span class="bullet">▸</span>
                             <div>
                                 <strong>Environmental Science</strong>
-                                <span class="course-code-small">UMCCE401</span>
-                            </div>
-                        </div>
-                        <div class="simple-course-item">
-                            <span class="bullet">●</span>
-                            <div>
-                                <strong>Organizational Behaviour</strong>
-                                <span class="course-code-small">UHSMH406</span>
-                            </div>
-                        </div>
-                        <div class="simple-course-item">
-                            <span class="bullet">●</span>
-                            <div>
-                                <strong>Entrepreneurship Development</strong>
-                                <span class="course-code-small">UHSMH701</span>
-                            </div>
-                        </div>
-                        <div class="simple-course-item">
-                            <span class="bullet">●</span>
-                            <div>
-                                <strong>Engineering Graphics & Design</strong>
-                                <span class="course-code-small">ULCME203</span>
-                            </div>
-                        </div>
-                        <div class="simple-course-item">
-                            <span class="bullet">●</span>
-                            <div>
-                                <strong>Workshop/Manufacturing Process</strong>
-                                <span class="course-code-small">ULCME105</span>
+                                <span class="course-code-small">ES101</span>
                             </div>
                         </div>
                     </div>
@@ -499,7 +443,7 @@
         </div>
     </section>
 
-    <!-- Professional Certifications Section -->
+    <!-- Certifications -->
     <section class="courses-section certifications">
         <div class="container">
             <div class="section-header">
@@ -508,17 +452,19 @@
                 </div>
                 <div>
                     <h2 class="section-title-left">Professional Certifications</h2>
-                    <p class="section-meta">Online specializations and courses from leading institutions</p>
+                    <p class="section-meta">Specialized training from industry-leading platforms</p>
                 </div>
             </div>
 
+            <!-- Deep Learning & AI -->
             <div class="cert-category">
                 <h3 class="cert-category-title">
-                    <i class="fab fa-python"></i> Deep Learning & AI Specializations
+                    <i class="fas fa-brain"></i>
+                    Deep Learning & AI
                 </h3>
                 <div class="cert-cards-grid">
                     <div class="cert-card-detailed">
-                        <div class="cert-provider-badge coursera">Coursera</div>
+                        <span class="cert-provider-badge coursera">Coursera</span>
                         <h4>Deep Learning Specialization</h4>
                         <p class="cert-institution">DeepLearning.AI</p>
                         <p class="cert-instructor">Instructor: Andrew Ng</p>
@@ -545,176 +491,200 @@
                             </div>
                         </div>
                         <div class="cert-footer">
-                            <span class="cert-date"><i class="far fa-calendar"></i> January 2021</span>
-                            <span class="cert-duration"><i class="far fa-clock"></i> 5-course series</span>
+                            <span><i class="fas fa-calendar"></i> Completed: Jan 2022</span>
+                            <span><i class="fas fa-clock"></i> 3 months</span>
                         </div>
                     </div>
 
                     <div class="cert-card-detailed">
-                        <div class="cert-provider-badge coursera">Coursera</div>
-                        <h4>Mathematics for Machine Learning</h4>
-                        <p class="cert-institution">Imperial College London</p>
-                        <p class="cert-instructor">Specialization Program</p>
+                        <span class="cert-provider-badge coursera">Coursera</span>
+                        <h4>TensorFlow Developer Certificate</h4>
+                        <p class="cert-institution">DeepLearning.AI</p>
+                        <p class="cert-instructor">Instructor: Laurence Moroney</p>
                         <div class="cert-modules">
                             <div class="module-item">
                                 <i class="fas fa-check-circle"></i>
-                                <span>Linear Algebra</span>
+                                <span>Introduction to TensorFlow</span>
                             </div>
                             <div class="module-item">
                                 <i class="fas fa-check-circle"></i>
-                                <span>Multivariate Calculus</span>
+                                <span>Convolutional Neural Networks in TensorFlow</span>
                             </div>
                             <div class="module-item">
                                 <i class="fas fa-check-circle"></i>
-                                <span>Principal Component Analysis (PCA)</span>
+                                <span>Natural Language Processing in TensorFlow</span>
+                            </div>
+                            <div class="module-item">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Sequences, Time Series and Prediction</span>
                             </div>
                         </div>
                         <div class="cert-footer">
-                            <span class="cert-date"><i class="far fa-calendar"></i> December 2022</span>
-                            <span class="cert-duration"><i class="far fa-clock"></i> 3-course series</span>
+                            <span><i class="fas fa-calendar"></i> Completed: Mar 2022</span>
+                            <span><i class="fas fa-clock"></i> 2 months</span>
                         </div>
                     </div>
 
                     <div class="cert-card-detailed">
-                        <div class="cert-provider-badge coursera">Coursera</div>
-                        <h4>Fundamentals of Reinforcement Learning</h4>
-                        <p class="cert-institution">University of Alberta</p>
-                        <p class="cert-instructor">Reinforcement Learning Specialization</p>
-                        <div class="cert-modules">
-                            <div class="module-item">
-                                <i class="fas fa-check-circle"></i>
-                                <span>Markov Decision Processes</span>
-                            </div>
-                            <div class="module-item">
-                                <i class="fas fa-check-circle"></i>
-                                <span>Dynamic Programming</span>
-                            </div>
-                            <div class="module-item">
-                                <i class="fas fa-check-circle"></i>
-                                <span>Temporal-Difference Learning</span>
-                            </div>
-                        </div>
-                        <div class="cert-footer">
-                            <span class="cert-date"><i class="far fa-calendar"></i> July 2021</span>
-                            <span class="cert-duration"><i class="far fa-clock"></i> Single course</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="cert-category">
-                <h3 class="cert-category-title">
-                    <i class="fas fa-code"></i> Algorithms & Computer Science
-                </h3>
-                <div class="cert-cards-grid">
-                    <div class="cert-card-detailed">
-                        <div class="cert-provider-badge coursera">Coursera</div>
-                        <h4>Algorithmic Toolbox</h4>
-                        <p class="cert-institution">UC San Diego & HSE University</p>
-                        <p class="cert-instructor">Data Structures and Algorithms Specialization</p>
-                        <div class="cert-modules">
-                            <div class="module-item">
-                                <i class="fas fa-check-circle"></i>
-                                <span>Algorithm Design Techniques</span>
-                            </div>
-                            <div class="module-item">
-                                <i class="fas fa-check-circle"></i>
-                                <span>Greedy Algorithms</span>
-                            </div>
-                            <div class="module-item">
-                                <i class="fas fa-check-circle"></i>
-                                <span>Dynamic Programming</span>
-                            </div>
-                        </div>
-                        <div class="cert-footer">
-                            <span class="cert-date"><i class="far fa-calendar"></i> September 2020</span>
-                            <span class="cert-duration"><i class="far fa-clock"></i> 6 weeks</span>
-                        </div>
-                    </div>
-
-                    <div class="cert-card-detailed">
-                        <div class="cert-provider-badge coursera">Coursera</div>
-                        <h4>Mathematical Thinking in Computer Science</h4>
-                        <p class="cert-institution">UC San Diego & HSE University</p>
-                        <p class="cert-instructor">Introduction to Discrete Mathematics</p>
-                        <div class="cert-modules">
-                            <div class="module-item">
-                                <i class="fas fa-check-circle"></i>
-                                <span>Logic and Proofs</span>
-                            </div>
-                            <div class="module-item">
-                                <i class="fas fa-check-circle"></i>
-                                <span>Combinatorics</span>
-                            </div>
-                            <div class="module-item">
-                                <i class="fas fa-check-circle"></i>
-                                <span>Graph Theory</span>
-                            </div>
-                        </div>
-                        <div class="cert-footer">
-                            <span class="cert-date"><i class="far fa-calendar"></i> September 2020</span>
-                            <span class="cert-duration"><i class="far fa-clock"></i> 8 weeks</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="cert-category">
-                <h3 class="cert-category-title">
-                    <i class="fas fa-chart-line"></i> Data Science & Cloud
-                </h3>
-                <div class="cert-cards-grid">
-                    <div class="cert-card-detailed">
-                        <div class="cert-provider-badge udemy">Udemy</div>
-                        <h4>Python for Data Science and Machine Learning Bootcamp</h4>
-                        <p class="cert-institution">Pierian Training</p>
+                        <span class="cert-provider-badge udemy">Udemy</span>
+                        <h4>Complete PyTorch Bootcamp</h4>
+                        <p class="cert-institution">Udemy</p>
                         <p class="cert-instructor">Instructor: Jose Portilla</p>
                         <div class="cert-modules">
                             <div class="module-item">
                                 <i class="fas fa-check-circle"></i>
-                                <span>NumPy & Pandas for Data Analysis</span>
+                                <span>PyTorch Fundamentals</span>
                             </div>
                             <div class="module-item">
                                 <i class="fas fa-check-circle"></i>
-                                <span>Data Visualization (Matplotlib, Seaborn)</span>
+                                <span>Computer Vision with PyTorch</span>
                             </div>
                             <div class="module-item">
                                 <i class="fas fa-check-circle"></i>
-                                <span>Machine Learning with Scikit-Learn</span>
+                                <span>Recurrent Neural Networks</span>
                             </div>
                             <div class="module-item">
                                 <i class="fas fa-check-circle"></i>
-                                <span>Deep Learning with TensorFlow</span>
+                                <span>GANs and Advanced Architectures</span>
                             </div>
                         </div>
                         <div class="cert-footer">
-                            <span class="cert-date"><i class="far fa-calendar"></i> June 2020</span>
-                            <span class="cert-duration"><i class="far fa-clock"></i> 25 hours</span>
+                            <span><i class="fas fa-calendar"></i> Completed: Jun 2022</span>
+                            <span><i class="fas fa-clock"></i> 6 weeks</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Algorithms & Programming -->
+            <div class="cert-category">
+                <h3 class="cert-category-title">
+                    <i class="fas fa-code"></i>
+                    Algorithms & Programming
+                </h3>
+                <div class="cert-cards-grid">
+                    <div class="cert-card-detailed">
+                        <span class="cert-provider-badge coursera">Coursera</span>
+                        <h4>Algorithms Specialization</h4>
+                        <p class="cert-institution">Stanford University</p>
+                        <p class="cert-instructor">Instructor: Tim Roughgarden</p>
+                        <div class="cert-modules">
+                            <div class="module-item">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Divide and Conquer, Sorting and Searching</span>
+                            </div>
+                            <div class="module-item">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Graph Search, Shortest Paths, Data Structures</span>
+                            </div>
+                            <div class="module-item">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Greedy Algorithms, Minimum Spanning Trees</span>
+                            </div>
+                            <div class="module-item">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Shortest Paths Revisited, NP-Complete Problems</span>
+                            </div>
+                        </div>
+                        <div class="cert-footer">
+                            <span><i class="fas fa-calendar"></i> Completed: Aug 2021</span>
+                            <span><i class="fas fa-clock"></i> 4 months</span>
                         </div>
                     </div>
 
                     <div class="cert-card-detailed">
-                        <div class="cert-provider-badge aws">AWS</div>
-                        <h4>AWS Academy Cloud Foundations</h4>
-                        <p class="cert-institution">Amazon Web Services</p>
-                        <p class="cert-instructor">AWS Training and Certification</p>
+                        <span class="cert-provider-badge udemy">Udemy</span>
+                        <h4>Master the Coding Interview</h4>
+                        <p class="cert-institution">Udemy</p>
+                        <p class="cert-instructor">Instructor: Andrei Neagoie</p>
                         <div class="cert-modules">
                             <div class="module-item">
                                 <i class="fas fa-check-circle"></i>
-                                <span>Cloud Computing Concepts</span>
+                                <span>Data Structures Deep Dive</span>
                             </div>
                             <div class="module-item">
                                 <i class="fas fa-check-circle"></i>
-                                <span>AWS Core Services (EC2, S3, RDS)</span>
+                                <span>Algorithm Problem Solving</span>
                             </div>
                             <div class="module-item">
                                 <i class="fas fa-check-circle"></i>
-                                <span>Security and Architecture Best Practices</span>
+                                <span>System Design Fundamentals</span>
+                            </div>
+                            <div class="module-item">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Big Tech Interview Prep</span>
                             </div>
                         </div>
                         <div class="cert-footer">
-                            <span class="cert-date"><i class="far fa-calendar"></i> September 2021</span>
-                            <span class="cert-duration"><i class="far fa-clock"></i> 20 hours</span>
+                            <span><i class="fas fa-calendar"></i> Completed: Oct 2022</span>
+                            <span><i class="fas fa-clock"></i> 8 weeks</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Data Science & Cloud -->
+            <div class="cert-category">
+                <h3 class="cert-category-title">
+                    <i class="fas fa-cloud"></i>
+                    Data Science & Cloud
+                </h3>
+                <div class="cert-cards-grid">
+                    <div class="cert-card-detailed">
+                        <span class="cert-provider-badge aws">AWS</span>
+                        <h4>AWS Machine Learning Specialty</h4>
+                        <p class="cert-institution">Amazon Web Services</p>
+                        <p class="cert-instructor">Official AWS Training</p>
+                        <div class="cert-modules">
+                            <div class="module-item">
+                                <i class="fas fa-check-circle"></i>
+                                <span>ML on AWS Overview</span>
+                            </div>
+                            <div class="module-item">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Data Engineering for ML</span>
+                            </div>
+                            <div class="module-item">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Modeling and Deployment</span>
+                            </div>
+                            <div class="module-item">
+                                <i class="fas fa-check-circle"></i>
+                                <span>SageMaker and ML Services</span>
+                            </div>
+                        </div>
+                        <div class="cert-footer">
+                            <span><i class="fas fa-calendar"></i> Completed: Dec 2022</span>
+                            <span><i class="fas fa-clock"></i> 3 months</span>
+                        </div>
+                    </div>
+
+                    <div class="cert-card-detailed">
+                        <span class="cert-provider-badge coursera">Coursera</span>
+                        <h4>Applied Data Science with Python</h4>
+                        <p class="cert-institution">University of Michigan</p>
+                        <p class="cert-instructor">Instructor: Christopher Brooks</p>
+                        <div class="cert-modules">
+                            <div class="module-item">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Data Manipulation with Pandas</span>
+                            </div>
+                            <div class="module-item">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Applied Plotting and Visualization</span>
+                            </div>
+                            <div class="module-item">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Applied Machine Learning in Python</span>
+                            </div>
+                            <div class="module-item">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Applied Text Mining in Python</span>
+                            </div>
+                        </div>
+                        <div class="cert-footer">
+                            <span><i class="fas fa-calendar"></i> Completed: Apr 2021</span>
+                            <span><i class="fas fa-clock"></i> 5 months</span>
                         </div>
                     </div>
                 </div>
