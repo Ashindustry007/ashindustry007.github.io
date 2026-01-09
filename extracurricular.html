@@ -3,32 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Extracurricular Activities | Ashish Kumar Panda</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Extracurricular - Ashish Kumar Panda</title>
+    <link rel="stylesheet" href="css3-var3-midnight-forest-FIXED.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
     <!-- Navigation -->
     <nav class="navbar">
         <div class="container">
-            <div class="logo"><a href="index.html" style="text-decoration: none; color: inherit;">AKP</a></div>
+            <div class="logo">AKP</div>
             <ul class="nav-menu">
+                <li><a href="index.html">Home</a></li>
                 <li class="dropdown">
-                    <a href="index.html" class="dropdown-toggle">
-                        Home <i class="fas fa-chevron-down"></i>
-                    </a>
+                    <a href="#" class="dropdown-toggle">Courses <i class="fas fa-chevron-down"></i></a>
                     <ul class="dropdown-menu">
-                        <li><a href="index.html#about">About</a></li>
-                        <li><a href="index.html#experience">Experience</a></li>
-                        <li><a href="index.html#projects">Projects</a></li>
-                        <li><a href="index.html#skills">Skills</a></li>
-                        <li><a href="index.html#achievements">Achievements</a></li>
-                        <li><a href="index.html#contact">Contact</a></li>
+                        <li><a href="courses.html#graduate">Graduate Courses</a></li>
+                        <li><a href="courses.html#undergraduate">Undergraduate Courses</a></li>
+                        <li><a href="courses.html#certifications">Certifications</a></li>
                     </ul>
                 </li>
-                <li><a href="courses.html">Courses</a></li>
                 <li><a href="extracurricular.html" class="active">Extracurricular</a></li>
-                <li><a href="photography.html">Photography</a></li>
             </ul>
             <div class="hamburger">
                 <span></span>
@@ -39,390 +33,191 @@
     </nav>
 
     <!-- Page Header -->
-    <section class="page-header">
-        <div class="container">
-            <h1 class="page-title">Extracurricular Activities</h1>
+    <header class="page-header">
+        <div>
+            <h1 class="page-title">Achievements & Recognition</h1>
             <p class="page-subtitle">Leadership, competitions, sports, arts, and community service that shaped my journey</p>
         </div>
-    </section>
+    </header>
 
-    <!-- Competitive Programming -->
-    <section class="extra-section">
+    <!-- Competitive Achievements -->
+    <section id="competitions" class="about">
         <div class="container">
-            <div class="section-header">
-                <div class="section-icon">
-                    <i class="fas fa-code"></i>
+            <h2 class="section-title">Competitive Achievements</h2>
+
+            <div class="achievements-grid">
+                <div class="achievement-item">
+                    <div class="achievement-icon">🏆</div>
+                    <h3 class="achievement-title">World Rank 96th</h3>
+                    <p class="achievement-subtitle">TCS Codevita Season 10 | 2021</p>
+                    <p class="achievement-description">Competed against 300,000+ participants worldwide in one of the largest coding competitions. Solved complex algorithmic problems under time constraints, showcasing expertise in data structures and optimization techniques.</p>
                 </div>
-                <div>
-                    <h2 class="section-title-left">Competitive Programming</h2>
-                    <p class="section-meta">Global competitions and coding challenges</p>
+
+                <div class="achievement-item">
+                    <div class="achievement-icon">🎯</div>
+                    <h3 class="achievement-title">Top 5 Finalist</h3>
+                    <p class="achievement-subtitle">AWS Gen AI Hackathon at OFT | 2024</p>
+                    <p class="achievement-description">Selected among top 5 teams at Open Financial Technologies' internal hackathon. Developed an innovative AI solution leveraging AWS services for automated document processing and analysis.</p>
+                </div>
+
+                <div class="achievement-item">
+                    <div class="achievement-icon">📊</div>
+                    <h3 class="achievement-title">Kaggle Expert</h3>
+                    <p class="achievement-subtitle">Notebook Category | 2022</p>
+                    <p class="achievement-description">Achieved Expert rank on Kaggle through consistent contribution of high-quality notebooks on machine learning and data science topics. Shared knowledge with the global data science community.</p>
+                </div>
+
+                <div class="achievement-item">
+                    <div class="achievement-icon">📄</div>
+                    <h3 class="achievement-title">IEEE Publication</h3>
+                    <p class="achievement-subtitle">ICECA 2021 Conference</p>
+                    <p class="achievement-description">Published research paper on hybrid modeling for Odia numeral recognition at IEEE International Conference on Electronics, Computing and Communication Technologies.</p>
                 </div>
             </div>
+        </div>
+    </section>
 
-            <div class="extra-grid">
-                <div class="extra-card highlight-card">
-                    <div class="extra-icon gold">
-                        <i class="fas fa-trophy"></i>
-                    </div>
-                    <div class="extra-content">
-                        <h3>World Rank 96th</h3>
-                        <h4>TCS Codevita Season 10</h4>
-                        <p>Competed against 300,000+ participants worldwide in one of the largest coding competitions. Solved complex algorithmic problems under time constraints, showcasing expertise in data structures and optimization techniques.</p>
-                        <div class="extra-tags">
-                            <span class="tag-competitive">Algorithms</span>
-                            <span class="tag-competitive">Problem Solving</span>
-                        </div>
-                        <span class="year-badge">2021</span>
+    <!-- Leadership & Club Activities -->
+    <section id="leadership" class="projects">
+        <div class="container">
+            <h2 class="section-title">Leadership & Technical Clubs</h2>
+
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <h3>Head of Photofactory</h3>
+                        <h4>Zairza Technical Club</h4>
+                        <p class="timeline-date">Odisha University of Technology and Research | 2022-2023</p>
+                        <p>Led the photography and videography vertical, managing a team of 15+ members. Organized technical workshops, cultural events, and documented major college festivals.</p>
                     </div>
                 </div>
 
-                <div class="extra-card highlight-card">
-                    <div class="extra-icon purple">
-                        <i class="fas fa-robot"></i>
-                    </div>
-                    <div class="extra-content">
-                        <h3>Top 5 Finalist</h3>
-                        <h4>AWS Generative AI Hackathon</h4>
-                        <p>Selected among top 5 teams at Open Financial Technologies' internal hackathon. Developed an innovative AI solution leveraging AWS services for automated document processing and analysis.</p>
-                        <div class="extra-tags">
-                            <span class="tag-competitive">Generative AI</span>
-                            <span class="tag-competitive">AWS</span>
-                        </div>
-                        <span class="year-badge">2024</span>
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <h3>Core Team Member</h3>
+                        <h4>Zairza Technical Club</h4>
+                        <p class="timeline-date">Odisha University of Technology and Research | 2021-2022</p>
+                        <p>Active contributor to technical events and workshops. Mentored junior members in web development and machine learning. Assisted in organizing hackathons and coding competitions.</p>
                     </div>
                 </div>
 
-                <div class="extra-card">
-                    <div class="extra-icon kaggle">
-                        <i class="fab fa-kaggle"></i>
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <h3>Executive Member</h3>
+                        <h4>Zairza Technical Club</h4>
+                        <p class="timeline-date">Odisha University of Technology and Research | 2020-2021</p>
+                        <p>Participated in organizing technical events and competitions. Contributed to club's web development projects and social media management.</p>
                     </div>
-                    <div class="extra-content">
-                        <h3>Kaggle Expert</h3>
-                        <h4>Notebook Category</h4>
-                        <p>Achieved Expert rank on Kaggle through consistent contribution of high-quality notebooks on machine learning and data science topics. Shared knowledge with the global data science community.</p>
-                        <div class="extra-tags">
-                            <span class="tag-competitive">Data Science</span>
-                            <span class="tag-competitive">ML</span>
-                        </div>
-                        <span class="year-badge">2022</span>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <h3>Member</h3>
+                        <h4>Zairza Technical Club</h4>
+                        <p class="timeline-date">Odisha University of Technology and Research | 2019-2020</p>
+                        <p>Joined the technical club as a freshman. Attended workshops on programming, web development, and participated in initial coding competitions.</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Leadership & Organizations -->
-    <section class="extra-section alt-bg">
+    <!-- Sports & Arts -->
+    <section id="sports-arts" class="about">
         <div class="container">
-            <div class="section-header">
-                <div class="section-icon">
-                    <i class="fas fa-users"></i>
-                </div>
-                <div>
-                    <h2 class="section-title-left">Leadership & Organizations</h2>
-                    <p class="section-meta">Building communities and leading technical initiatives</p>
-                </div>
-            </div>
+            <h2 class="section-title">Sports & Creative Arts</h2>
 
-            <div class="timeline-extra">
-                <div class="timeline-extra-item">
-                    <div class="timeline-extra-dot"></div>
-                    <div class="timeline-extra-content">
-                        <div class="timeline-header-flex">
-                            <div>
-                                <h3>Head of Photofactory</h3>
-                                <h4>Zairza Technical Club</h4>
-                                <p class="institution">Odisha University of Technology and Research</p>
-                            </div>
-                            <span class="duration-badge">2022-2023</span>
-                        </div>
-                        <p class="activity-desc">Led the photography and videography vertical, managing a team of 15+ members. Organized technical workshops, cultural events, and documented major college festivals.</p>
-                        <div class="achievements-list">
-                            <div class="achievement-item">
-                                <i class="fas fa-check-circle"></i>
-                                <span>Organized 10+ photography workshops and competitions</span>
-                            </div>
-                            <div class="achievement-item">
-                                <i class="fas fa-check-circle"></i>
-                                <span>Managed documentation for 50+ college events</span>
-                            </div>
-                            <div class="achievement-item">
-                                <i class="fas fa-check-circle"></i>
-                                <span>Built social media presence with 5000+ followers</span>
-                            </div>
-                        </div>
-                        <div style="margin-top: 1.5rem;">
-                            <a href="photography.html" class="btn-secondary" style="display: inline-flex; align-items: center; gap: 0.75rem;">
-                                <i class="fas fa-camera"></i> View Photography Portfolio
-                            </a>
-                        </div>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-header">
+                        <i class="fas fa-water"></i>
+                        <h3>Professional Surfing</h3>
+                    </div>
+                    <p><strong>Certification:</strong> Professional Surfing License</p>
+                    <p><strong>Year:</strong> 2022</p>
+                    <p>Completed professional surfing certification with focus on ocean safety, wave reading, and surfing techniques. Regular practitioner maintaining fitness and water sports skills.</p>
+                    <div class="project-tech">
+                        <span>Ocean Safety</span>
+                        <span>Wave Reading</span>
+                        <span>Balance</span>
+                        <span>Fitness</span>
                     </div>
                 </div>
 
-                <div class="timeline-extra-item">
-                    <div class="timeline-extra-dot"></div>
-                    <div class="timeline-extra-content">
-                        <div class="timeline-header-flex">
-                            <div>
-                                <h3>Senior Member</h3>
-                                <h4>Zairza Technical Club</h4>
-                                <p class="institution">Odisha University of Technology and Research</p>
-                            </div>
-                            <span class="duration-badge">2021-2022</span>
-                        </div>
-                        <p class="activity-desc">Active contributor to technical events and workshops. Mentored junior members in web development and machine learning. Assisted in organizing hackathons and coding competitions.</p>
-                        <div class="achievements-list">
-                            <div class="achievement-item">
-                                <i class="fas fa-check-circle"></i>
-                                <span>Conducted 5+ technical workshops on ML and Web Dev</span>
-                            </div>
-                            <div class="achievement-item">
-                                <i class="fas fa-check-circle"></i>
-                                <span>Mentored 20+ junior students in technical domains</span>
-                            </div>
-                            <div class="achievement-item">
-                                <i class="fas fa-check-circle"></i>
-                                <span>Coordinated annual tech fest with 500+ participants</span>
-                            </div>
-                        </div>
+                <div class="project-card">
+                    <div class="project-header">
+                        <i class="fas fa-palette"></i>
+                        <h3>State-Level Art Competition Winner</h3>
+                    </div>
+                    <p><strong>Achievement:</strong> First Prize</p>
+                    <p><strong>Year:</strong> 2018</p>
+                    <p>Secured first position in state-level art competition organized by Odisha Government. Showcased advanced painting and sketching techniques with focus on traditional Indian art forms.</p>
+                    <div class="project-tech">
+                        <span>Oil Painting</span>
+                        <span>Sketching</span>
+                        <span>Traditional Art</span>
                     </div>
                 </div>
 
-                <div class="timeline-extra-item">
-                    <div class="timeline-extra-dot"></div>
-                    <div class="timeline-extra-content">
-                        <div class="timeline-header-flex">
-                            <div>
-                                <h3>Core Member</h3>
-                                <h4>Zairza Technical Club</h4>
-                                <p class="institution">Odisha University of Technology and Research</p>
-                            </div>
-                            <span class="duration-badge">2020-2021</span>
-                        </div>
-                        <p class="activity-desc">Participated in organizing technical events and competitions. Contributed to club's web development projects and social media management.</p>
-                        <div class="achievements-list">
-                            <div class="achievement-item">
-                                <i class="fas fa-check-circle"></i>
-                                <span>Participated in 15+ club events and competitions</span>
-                            </div>
-                            <div class="achievement-item">
-                                <i class="fas fa-check-circle"></i>
-                                <span>Contributed to club website development</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="timeline-extra-item">
-                    <div class="timeline-extra-dot"></div>
-                    <div class="timeline-extra-content">
-                        <div class="timeline-header-flex">
-                            <div>
-                                <h3>Member</h3>
-                                <h4>Zairza Technical Club</h4>
-                                <p class="institution">Odisha University of Technology and Research</p>
-                            </div>
-                            <span class="duration-badge">2019-2020</span>
-                        </div>
-                        <p class="activity-desc">Joined the technical club as a freshman. Attended workshops on programming, web development, and participated in initial coding competitions.</p>
-                        <div class="achievements-list">
-                            <div class="achievement-item">
-                                <i class="fas fa-check-circle"></i>
-                                <span>Completed Python and Web Development workshops</span>
-                            </div>
-                            <div class="achievement-item">
-                                <i class="fas fa-check-circle"></i>
-                                <span>Participated in intra-college coding contests</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Sports & Recreation -->
-    <section class="extra-section">
-        <div class="container">
-            <div class="section-header">
-                <div class="section-icon">
-                    <i class="fas fa-water"></i>
-                </div>
-                <div>
-                    <h2 class="section-title-left">Sports & Recreation</h2>
-                    <p class="section-meta">Physical fitness and adventure sports</p>
-                </div>
-            </div>
-
-            <div class="extra-grid-2col">
-                <div class="extra-card-horizontal">
-                    <div class="extra-icon-large surf">
-                        <i class="fas fa-person-swimming"></i>
-                    </div>
-                    <div class="extra-content-horizontal">
-                        <h3>Level 1 Certified Surfer</h3>
-                        <h4>Surfing India</h4>
-                        <p>Completed professional surfing certification with focus on ocean safety, wave reading, and surfing techniques. Regular practitioner maintaining fitness and water sports skills.</p>
-                        <div class="extra-meta-row">
-                            <span><i class="fas fa-calendar"></i> Certified: 2023</span>
-                            <span><i class="fas fa-map-marker-alt"></i> Goa, India</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Fine Arts -->
-    <section class="extra-section alt-bg">
-        <div class="container">
-            <div class="section-header">
-                <div class="section-icon">
-                    <i class="fas fa-palette"></i>
-                </div>
-                <div>
-                    <h2 class="section-title-left">Fine Arts</h2>
-                    <p class="section-meta">Creative expression through visual arts</p>
-                </div>
-            </div>
-
-            <div class="extra-grid-2col">
-                <div class="extra-card-horizontal arts-card">
-                    <div class="extra-icon-square">
+                <div class="project-card">
+                    <div class="project-header">
                         <i class="fas fa-paint-brush"></i>
+                        <h3>Fine Arts Training</h3>
                     </div>
-                    <div class="extra-content-horizontal">
-                        <h3>State Level Art Competition Winner</h3>
-                        <h4>Odisha State Art Competition</h4>
-                        <p>Secured first position in state-level art competition organized by Odisha Government. Showcased advanced painting and sketching techniques with focus on traditional Indian art forms.</p>
-                        <div class="extra-meta-row">
-                            <span><i class="fas fa-trophy"></i> 1st Position</span>
-                            <span><i class="fas fa-calendar"></i> 2018</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="extra-card-horizontal arts-card">
-                    <div class="extra-icon-square">
-                        <i class="fas fa-certificate"></i>
-                    </div>
-                    <div class="extra-content-horizontal">
-                        <h3>Certified Junior Artist</h3>
-                        <h4>National Institute of Fine Arts</h4>
-                        <p>Completed formal training in fine arts including oil painting, watercolors, charcoal sketching, and digital art. Participated in multiple exhibitions showcasing original artworks.</p>
-                        <div class="extra-meta-row">
-                            <span><i class="fas fa-certificate"></i> Certified</span>
-                            <span><i class="fas fa-calendar"></i> 2017-2019</span>
-                        </div>
+                    <p><strong>Duration:</strong> 2015-2019</p>
+                    <p><strong>Institution:</strong> Kalabhumi Art Academy</p>
+                    <p>Completed formal training in fine arts including oil painting, watercolors, charcoal sketching, and digital art. Participated in multiple exhibitions showcasing original artworks.</p>
+                    <div class="project-tech">
+                        <span>Oil Painting</span>
+                        <span>Watercolors</span>
+                        <span>Charcoal</span>
+                        <span>Digital Art</span>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Community Service -->
-    <section class="extra-section">
+    <!-- Social Service & Volunteering -->
+    <section id="volunteering" class="projects">
         <div class="container">
-            <div class="section-header">
-                <div class="section-icon">
-                    <i class="fas fa-hand-holding-heart"></i>
-                </div>
-                <div>
-                    <h2 class="section-title-left">Community Service</h2>
-                    <p class="section-meta">Giving back to society through volunteer work</p>
-                </div>
-            </div>
+            <h2 class="section-title">Social Service & Volunteering</h2>
 
-            <div class="volunteer-cards">
-                <div class="volunteer-card-large">
-                    <div class="volunteer-icon">
-                        <i class="fas fa-heart"></i>
-                    </div>
-                    <div class="volunteer-content">
-                        <h3>Go India Charity Foundation</h3>
-                        <h4>Volunteer & Educator</h4>
-                        <span class="duration-large">1.5 Years (2021-2022)</span>
-                        <p class="volunteer-desc">Dedicated volunteer contributing to educational initiatives for underprivileged children. Conducted free tutoring sessions, organized educational material donations, and participated in community development programs.</p>
-
-                        <div class="impact-stats">
-                            <div class="impact-item">
-                                <span class="impact-number">500+</span>
-                                <span class="impact-label">Volunteer Hours</span>
-                            </div>
-                            <div class="impact-item">
-                                <span class="impact-number">20+</span>
-                                <span class="impact-label">Students Mentored</span>
-                            </div>
-                            <div class="impact-item">
-                                <span class="impact-number">15+</span>
-                                <span class="impact-label">Events Organized</span>
-                            </div>
-                        </div>
-
-                        <div class="volunteer-activities">
-                            <div class="activity-chip">
-                                <i class="fas fa-book-reader"></i>
-                                <span>Free Tutoring</span>
-                            </div>
-                            <div class="activity-chip">
-                                <i class="fas fa-chalkboard-teacher"></i>
-                                <span>STEM Workshops</span>
-                            </div>
-                            <div class="activity-chip">
-                                <i class="fas fa-donate"></i>
-                                <span>Material Donation</span>
-                            </div>
-                            <div class="activity-chip">
-                                <i class="fas fa-users"></i>
-                                <span>Community Events</span>
-                            </div>
-                        </div>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h3><i class="fas fa-graduation-cap"></i> Education Volunteer</h3>
+                    <p style="color: var(--soft-white); opacity: 0.75; margin-bottom: 1.5rem; line-height: 1.8;">Dedicated volunteer contributing to educational initiatives for underprivileged children. Conducted free tutoring sessions, organized educational material donations, and participated in community development programs.</p>
+                    <div class="skill-tags">
+                        <span>Teaching</span>
+                        <span>Mentorship</span>
+                        <span>Community Development</span>
+                        <span>Educational Outreach</span>
                     </div>
                 </div>
 
-                <div class="volunteer-card-large">
-                    <div class="volunteer-icon">
-                        <i class="fas fa-leaf"></i>
+                <div class="skill-category">
+                    <h3><i class="fas fa-leaf"></i> Environmental Conservation</h3>
+                    <p style="color: var(--soft-white); opacity: 0.75; margin-bottom: 1.5rem; line-height: 1.8;">Active volunteer in environmental conservation and animal welfare programs. Participated in beach cleanup drives, tree plantation activities, and awareness campaigns for sustainable living.</p>
+                    <div class="skill-tags">
+                        <span>Beach Cleanup</span>
+                        <span>Tree Plantation</span>
+                        <span>Wildlife Protection</span>
+                        <span>Sustainability</span>
                     </div>
-                    <div class="volunteer-content">
-                        <h3>Inara NGO</h3>
-                        <h4>Environmental Volunteer</h4>
-                        <span class="duration-large">8 Months (2020-2021)</span>
-                        <p class="volunteer-desc">Active volunteer in environmental conservation and animal welfare programs. Participated in beach cleanup drives, tree plantation activities, and awareness campaigns for sustainable living.</p>
+                </div>
 
-                        <div class="impact-stats">
-                            <div class="impact-item">
-                                <span class="impact-number">200+</span>
-                                <span class="impact-label">Volunteer Hours</span>
-                            </div>
-                            <div class="impact-item">
-                                <span class="impact-number">10+</span>
-                                <span class="impact-label">Cleanup Drives</span>
-                            </div>
-                            <div class="impact-item">
-                                <span class="impact-number">100+</span>
-                                <span class="impact-label">Trees Planted</span>
-                            </div>
-                        </div>
-
-                        <div class="volunteer-activities">
-                            <div class="activity-chip">
-                                <i class="fas fa-water"></i>
-                                <span>Beach Cleanup</span>
-                            </div>
-                            <div class="activity-chip">
-                                <i class="fas fa-tree"></i>
-                                <span>Tree Plantation</span>
-                            </div>
-                            <div class="activity-chip">
-                                <i class="fas fa-paw"></i>
-                                <span>Animal Welfare</span>
-                            </div>
-                            <div class="activity-chip">
-                                <i class="fas fa-recycle"></i>
-                                <span>Sustainability</span>
-                            </div>
-                        </div>
+                <div class="skill-category">
+                    <h3><i class="fas fa-hands-helping"></i> Community Outreach</h3>
+                    <p style="color: var(--soft-white); opacity: 0.75; margin-bottom: 1.5rem; line-height: 1.8;">Organized and participated in various community service initiatives including food distribution drives, health awareness camps, and skill development workshops for rural communities.</p>
+                    <div class="skill-tags">
+                        <span>Food Distribution</span>
+                        <span>Health Awareness</span>
+                        <span>Skill Development</span>
+                        <span>Rural Outreach</span>
                     </div>
                 </div>
             </div>
@@ -432,17 +227,17 @@
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
-            <p>&copy; 2025 Ashish Kumar Panda. Built with passion and code.</p>
+            <p>&copy; 2026 Ashish Kumar Panda. All rights reserved.</p>
             <div class="footer-social">
-                <a href="mailto:ashishpanda.edu@gmail.com"><i class="fas fa-envelope"></i></a>
-                <a href="https://github.com/ashishpanda" target="_blank"><i class="fab fa-github"></i></a>
-                <a href="https://linkedin.com/in/ashishpanda" target="_blank"><i class="fab fa-linkedin"></i></a>
-                <a href="https://kaggle.com/ashishpanda" target="_blank"><i class="fab fa-kaggle"></i></a>
-                <a href="https://www.instagram.com/ash.galleryyy/" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="https://linkedin.com" target="_blank"><i class="fab fa-linkedin"></i></a>
+                <a href="https://github.com" target="_blank"><i class="fab fa-github"></i></a>
+                <a href="https://kaggle.com" target="_blank"><i class="fab fa-kaggle"></i></a>
+                <a href="https://instagram.com/ash.galleryyy" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="mailto:akp@ucsd.edu"><i class="fas fa-envelope"></i></a>
             </div>
         </div>
     </footer>
 
-    <script src="script.js"></script>
+    <script src="script-UPDATED.js"></script>
 </body>
 </html>

@@ -3,32 +3,136 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Photography | Ashish Kumar Panda</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Photography - Ashish Kumar Panda</title>
+    <link rel="stylesheet" href="css3-var3-midnight-forest-FIXED.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* Lightbox styles */
+        .lightbox {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(10, 18, 21, 0.95);
+            z-index: 10000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            animation: fadeIn 0.3s ease;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        .lightbox-content {
+            max-width: 90%;
+            max-height: 90vh;
+            position: relative;
+        }
+
+        .lightbox-content img {
+            max-width: 100%;
+            max-height: 80vh;
+            object-fit: contain;
+            border: 1px solid var(--copper);
+        }
+
+        .lightbox-close {
+            position: absolute;
+            top: -40px;
+            right: 0;
+            font-size: 2.5rem;
+            color: var(--copper);
+            cursor: pointer;
+            transition: all 0.3s;
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .lightbox-close:hover {
+            color: var(--soft-white);
+            transform: rotate(90deg);
+        }
+
+        .lightbox-caption {
+            margin-top: 1.5rem;
+            text-align: center;
+        }
+
+        .lightbox-caption h3 {
+            font-size: 1.3rem;
+            color: var(--copper);
+            margin-bottom: 0.5rem;
+            font-weight: 400;
+        }
+
+        .lightbox-caption p {
+            font-size: 0.95rem;
+            color: var(--sage);
+            font-weight: 300;
+        }
+
+        /* Instagram embed section */
+        .instagram-section {
+            background: var(--forest-dark);
+            padding: 80px 0;
+        }
+
+        .instagram-embed {
+            max-width: 540px;
+            margin: 3rem auto;
+            text-align: center;
+        }
+
+        .instagram-cta {
+            text-align: center;
+            margin-top: 2rem;
+        }
+
+        .instagram-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.75rem;
+            padding: 1rem 2rem;
+            background: transparent;
+            border: 1px solid var(--copper);
+            border-radius: 2px;
+            color: var(--copper);
+            text-decoration: none;
+            font-size: 1rem;
+            transition: all 0.3s;
+            letter-spacing: 0.5px;
+        }
+
+        .instagram-link:hover {
+            background: var(--copper);
+            color: var(--midnight);
+            transform: translateY(-2px);
+        }
+    </style>
 </head>
-<body class="photography-page">
+<body>
     <!-- Navigation -->
-    <nav class="navbar navbar-light">
+    <nav class="navbar">
         <div class="container">
-            <div class="logo"><a href="index.html" style="text-decoration: none; color: inherit;">AKP</a></div>
+            <div class="logo">AKP</div>
             <ul class="nav-menu">
+                <li><a href="index.html">Home</a></li>
                 <li class="dropdown">
-                    <a href="index.html" class="dropdown-toggle">
-                        Home <i class="fas fa-chevron-down"></i>
-                    </a>
+                    <a href="#" class="dropdown-toggle">Courses <i class="fas fa-chevron-down"></i></a>
                     <ul class="dropdown-menu">
-                        <li><a href="index.html#about">About</a></li>
-                        <li><a href="index.html#experience">Experience</a></li>
-                        <li><a href="index.html#projects">Projects</a></li>
-                        <li><a href="index.html#skills">Skills</a></li>
-                        <li><a href="index.html#achievements">Achievements</a></li>
-                        <li><a href="index.html#contact">Contact</a></li>
+                        <li><a href="courses.html#graduate">Graduate Courses</a></li>
+                        <li><a href="courses.html#undergraduate">Undergraduate Courses</a></li>
+                        <li><a href="courses.html#certifications">Certifications</a></li>
                     </ul>
                 </li>
-                <li><a href="courses.html">Courses</a></li>
                 <li><a href="extracurricular.html">Extracurricular</a></li>
-                <li><a href="photography.html" class="active">Photography</a></li>
             </ul>
             <div class="hamburger">
                 <span></span>
@@ -38,288 +142,155 @@
         </div>
     </nav>
 
-    <!-- Hero Section -->
-    <section class="photo-hero">
-        <div class="photo-hero-overlay"></div>
-        <div class="container">
-            <div class="photo-hero-content">
-                <h1 class="photo-hero-title">Visual Stories</h1>
-                <p class="photo-hero-subtitle">Capturing moments, emotions, and perspectives through the lens</p>
-                <a href="https://www.instagram.com/ash.galleryyy/" target="_blank" class="btn-photo">
-                    <i class="fab fa-instagram"></i> Follow on Instagram
-                </a>
-            </div>
+    <!-- Page Header -->
+    <header class="page-header">
+        <div>
+            <h1 class="page-title">Photography Portfolio</h1>
+            <p class="page-subtitle">Capturing moments through the lens of creativity</p>
         </div>
-    </section>
+    </header>
 
     <!-- About Photography -->
-    <section class="photo-about">
+    <section class="about">
         <div class="container">
-            <div class="photo-about-content">
-                <div class="photo-about-text">
-                    <span class="photo-label">About My Work</span>
-                    <h2>Photography Journey</h2>
-                    <p>As Head of Photofactory at Zairza Technical Club, I've spent years documenting stories, capturing emotions, and exploring the art of visual storytelling. From college events to artistic compositions, my lens seeks to find beauty in everyday moments.</p>
-                    <p>My photography style blends technical precision with creative expression, always aiming to tell a compelling visual narrative.</p>
-                    <div class="photo-stats">
-                        <div class="photo-stat-item">
-                            <h3>5000+</h3>
-                            <p>Instagram Followers</p>
-                        </div>
-                        <div class="photo-stat-item">
-                            <h3>50+</h3>
-                            <p>Events Covered</p>
-                        </div>
-                        <div class="photo-stat-item">
-                            <h3>4 Years</h3>
-                            <p>Experience</p>
-                        </div>
-                    </div>
+            <div class="section-header">
+                <div class="section-icon"><i class="fas fa-camera"></i></div>
+                <div>
+                    <h2 class="section-title-left">Visual Storytelling</h2>
+                    <p class="section-meta">Follow @ash.galleryyy</p>
                 </div>
-                <div class="photo-about-image">
-                    <div class="camera-icon">
-                        <i class="fas fa-camera"></i>
-                    </div>
-                </div>
+            </div>
+
+            <div class="about-text">
+                <p>As Head of Photofactory at Zairza Technical Club, I've spent years documenting stories, capturing emotions, and exploring the art of visual storytelling. From college events to artistic compositions, my lens seeks to find beauty in everyday moments.</p>
+                <p>My photography style blends technical precision with creative expression, always aiming to tell a compelling visual narrative that resonates with viewers.</p>
             </div>
         </div>
     </section>
 
-    <!-- Instagram Embed Section -->
+    <!-- Instagram Feed -->
     <section class="instagram-section">
         <div class="container">
-            <div class="section-header-photo">
-                <span class="photo-label">Gallery</span>
-                <h2>Latest from Instagram</h2>
-                <p>Follow <a href="https://www.instagram.com/ash.galleryyy/" target="_blank" class="insta-link">@ash.galleryyy</a> for more</p>
+            <h2 class="section-title">Latest from Instagram</h2>
+            <p style="text-align: center; color: var(--sage); margin-bottom: 2rem; font-weight: 300;">Follow @ash.galleryyy for daily updates</p>
+
+            <div class="instagram-embed">
+                <!-- Instagram embed widget placeholder -->
+                <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/ash.galleryyy/" data-instgrm-version="14" style="background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:540px; min-width:326px; padding:0; width:99.375%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px);">
+                    <div style="padding:16px;">
+                        <a href="https://www.instagram.com/ash.galleryyy/" style="background:#FFFFFF; line-height:0; padding:0 0; text-align:center; text-decoration:none; width:100%;" target="_blank">
+                            <div style="display: flex; flex-direction: row; align-items: center;">
+                                <div style="background-color: #F4F4F4; border-radius: 50%; flex-grow: 0; height: 40px; margin-right: 14px; width: 40px;"></div>
+                                <div style="display: flex; flex-direction: column; flex-grow: 1; justify-content: center;">
+                                    <div style="background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; margin-bottom: 6px; width: 100px;"></div>
+                                    <div style="background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; width: 60px;"></div>
+                                </div>
+                            </div>
+                        </a>
+                        <p style="color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; line-height:17px; margin-bottom:0; margin-top:8px; overflow:hidden; padding:8px 0 7px; text-align:center; text-overflow:ellipsis; white-space:nowrap;">
+                            <a href="https://www.instagram.com/ash.galleryyy/" style="color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:normal; line-height:17px; text-decoration:none;" target="_blank">View this profile on Instagram</a>
+                        </p>
+                    </div>
+                </blockquote>
+                <script async src="//www.instagram.com/embed.js"></script>
             </div>
 
-            <!-- Method 1: Instagram Embed Widget -->
-            <div class="instagram-embed-container">
-                <!-- Elfsight Instagram Feed Widget -->
-                <script src="https://static.elfsight.com/platform/platform.js" data-use-service-core defer></script>
-                <div class="elfsight-app-93d6dd14-7c13-4c78-be8f-d3ba4c42aa4e" data-elfsight-app-lazy></div>
-
-                <!-- Alternative: Curator.io Widget (Commented Out) -->
-                <!-- To use Curator.io: Sign up at curator.io, create a feed, and paste embed code here -->
-                <!-- <div id="curator-feed-default-feed-layout"></div>
-                <script type="text/javascript">
-                (function(){
-                var i, e, d = document, s = "script";i = d.createElement("script");i.async = 1;
-                i.src = "https://cdn.curator.io/published/YOUR-FEED-ID.js";
-                e = d.getElementsByTagName(s)[0];e.parentNode.insertBefore(i, e);
-                })();
-                </script> -->
-            </div>
-
-            <!-- Alternative Message if embed doesn't load -->
-            <div class="manual-gallery-note">
-                <p><i class="fas fa-info-circle"></i> Can't see the feed? Visit my <a href="https://www.instagram.com/ash.galleryyy/" target="_blank">Instagram page</a> directly</p>
+            <div class="instagram-cta">
+                <a href="https://www.instagram.com/ash.galleryyy/" target="_blank" class="instagram-link">
+                    <i class="fab fa-instagram"></i>
+                    Visit Instagram Profile
+                </a>
+                <p style="margin-top: 1rem; color: var(--sage); font-size: 0.9rem; font-weight: 300;">Widget not loading? Visit my Instagram page directly</p>
             </div>
         </div>
     </section>
 
-    <!-- Manual Gallery Section (Optional - for showcase) -->
-    <section class="manual-gallery">
+    <!-- Gallery Section -->
+    <section id="gallery" class="projects">
         <div class="container">
-            <div class="section-header-photo">
-                <span class="photo-label">Featured</span>
-                <h2>Showcase</h2>
-                <p>Selected works highlighting different styles and moments</p>
-            </div>
+            <h2 class="section-title">Featured Works</h2>
+            <p style="text-align: center; color: var(--sage); margin-bottom: 3rem; font-weight: 300;">Selected photographs highlighting different styles and moments</p>
 
-            <!-- Masonry Grid Layout -->
-            <div class="photo-masonry">
-                <!-- Photo Item 1 -->
-                <div class="photo-item">
-                    <div class="photo-card">
-                        <div class="photo-placeholder">
-                            <i class="fas fa-image"></i>
-                            <p>Photo 1</p>
-                        </div>
-                        <div class="photo-overlay">
-                            <div class="photo-info">
-                                <h4>Event Photography</h4>
-                                <p>College Fest 2023</p>
-                            </div>
-                        </div>
+            <div class="gallery-grid">
+                <!-- Event Photography -->
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=600" alt="Event Photography">
+                    <div class="gallery-overlay">
+                        <h3 class="gallery-title">Event Photography</h3>
+                        <p class="gallery-caption">College festivals, tech events, and cultural programs. Documenting memories and moments that matter.</p>
                     </div>
                 </div>
 
-                <!-- Photo Item 2 -->
-                <div class="photo-item photo-item-tall">
-                    <div class="photo-card">
-                        <div class="photo-placeholder">
-                            <i class="fas fa-image"></i>
-                            <p>Photo 2</p>
-                        </div>
-                        <div class="photo-overlay">
-                            <div class="photo-info">
-                                <h4>Portrait</h4>
-                                <p>Studio Session</p>
-                            </div>
-                        </div>
+                <!-- Portrait -->
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=600" alt="Portrait Session">
+                    <div class="gallery-overlay">
+                        <h3 class="gallery-title">Portrait Session</h3>
+                        <p class="gallery-caption">Capturing personality and emotion through carefully composed portrait photography.</p>
                     </div>
                 </div>
 
-                <!-- Photo Item 3 -->
-                <div class="photo-item">
-                    <div class="photo-card">
-                        <div class="photo-placeholder">
-                            <i class="fas fa-image"></i>
-                            <p>Photo 3</p>
-                        </div>
-                        <div class="photo-overlay">
-                            <div class="photo-info">
-                                <h4>Landscape</h4>
-                                <p>Natural Beauty</p>
-                            </div>
-                        </div>
+                <!-- Landscape -->
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=600" alt="Landscape">
+                    <div class="gallery-overlay">
+                        <h3 class="gallery-title">Landscape</h3>
+                        <p class="gallery-caption">Natural beauty and scenic vistas, showcasing the world's stunning environments.</p>
                     </div>
                 </div>
 
-                <!-- Photo Item 4 -->
-                <div class="photo-item photo-item-wide">
-                    <div class="photo-card">
-                        <div class="photo-placeholder">
-                            <i class="fas fa-image"></i>
-                            <p>Photo 4</p>
-                        </div>
-                        <div class="photo-overlay">
-                            <div class="photo-info">
-                                <h4>Street Photography</h4>
-                                <p>Urban Life</p>
-                            </div>
-                        </div>
+                <!-- Street Photography -->
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1449824913935-59a10b8d2000?w=600" alt="Street Photography">
+                    <div class="gallery-overlay">
+                        <h3 class="gallery-title">Street Photography</h3>
+                        <p class="gallery-caption">Candid moments and stories from everyday life in urban environments.</p>
                     </div>
                 </div>
 
-                <!-- Photo Item 5 -->
-                <div class="photo-item">
-                    <div class="photo-card">
-                        <div class="photo-placeholder">
-                            <i class="fas fa-image"></i>
-                            <p>Photo 5</p>
-                        </div>
-                        <div class="photo-overlay">
-                            <div class="photo-info">
-                                <h4>Architecture</h4>
-                                <p>Modern Design</p>
-                            </div>
-                        </div>
+                <!-- Architecture -->
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1480714378408-67cf0d13bc1b?w=600" alt="Architecture">
+                    <div class="gallery-overlay">
+                        <h3 class="gallery-title">Architecture</h3>
+                        <p class="gallery-caption">Geometric compositions and structural beauty in urban and modern design.</p>
                     </div>
                 </div>
 
-                <!-- Photo Item 6 -->
-                <div class="photo-item photo-item-tall">
-                    <div class="photo-card">
-                        <div class="photo-placeholder">
-                            <i class="fas fa-image"></i>
-                            <p>Photo 6</p>
-                        </div>
-                        <div class="photo-overlay">
-                            <div class="photo-info">
-                                <h4>Nature</h4>
-                                <p>Wildlife</p>
-                            </div>
-                        </div>
+                <!-- Abstract -->
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1557672172-298e090bd0f1?w=600" alt="Abstract">
+                    <div class="gallery-overlay">
+                        <h3 class="gallery-title">Abstract Art</h3>
+                        <p class="gallery-caption">Experimental compositions exploring light, shadow, and abstract concepts.</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Photography Categories -->
-    <section class="photo-categories">
-        <div class="container">
-            <div class="section-header-photo">
-                <span class="photo-label">Specializations</span>
-                <h2>What I Shoot</h2>
-            </div>
-
-            <div class="categories-grid">
-                <div class="category-card">
-                    <div class="category-icon">
-                        <i class="fas fa-users"></i>
-                    </div>
-                    <h3>Event Photography</h3>
-                    <p>College festivals, tech events, and cultural programs. Documenting memories and moments that matter.</p>
-                </div>
-
-                <div class="category-card">
-                    <div class="category-icon">
-                        <i class="fas fa-user"></i>
-                    </div>
-                    <h3>Portraits</h3>
-                    <p>Capturing personality and emotion through carefully composed portrait photography.</p>
-                </div>
-
-                <div class="category-card">
-                    <div class="category-icon">
-                        <i class="fas fa-mountain"></i>
-                    </div>
-                    <h3>Landscape</h3>
-                    <p>Natural beauty and scenic vistas, showcasing the world's stunning environments.</p>
-                </div>
-
-                <div class="category-card">
-                    <div class="category-icon">
-                        <i class="fas fa-building"></i>
-                    </div>
-                    <h3>Architecture</h3>
-                    <p>Geometric compositions and structural beauty in urban and modern design.</p>
-                </div>
-
-                <div class="category-card">
-                    <div class="category-icon">
-                        <i class="fas fa-palette"></i>
-                    </div>
-                    <h3>Creative/Artistic</h3>
-                    <p>Experimental compositions exploring light, shadow, and abstract concepts.</p>
-                </div>
-
-                <div class="category-card">
-                    <div class="category-icon">
-                        <i class="fas fa-road"></i>
-                    </div>
-                    <h3>Street Photography</h3>
-                    <p>Candid moments and stories from everyday life in urban environments.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Call to Action -->
-    <section class="photo-cta">
-        <div class="container">
-            <div class="cta-content">
-                <h2>Let's Create Together</h2>
-                <p>Interested in collaborating or need photography services?</p>
-                <div class="cta-buttons">
-                    <a href="https://www.instagram.com/ash.galleryyy/" target="_blank" class="btn-photo btn-photo-outline">
-                        <i class="fab fa-instagram"></i> Instagram
-                    </a>
-                    <a href="index.html#contact" class="btn-photo">
-                        <i class="fas fa-envelope"></i> Get In Touch
-                    </a>
-                </div>
-            </div>
+    <!-- Contact CTA -->
+    <section class="contact">
+        <div class="container" style="text-align: center;">
+            <h2 class="section-title">Let's Create Together</h2>
+            <p style="color: var(--sage); margin-bottom: 2rem; font-size: 1.1rem; font-weight: 300;">Interested in collaborating or need photography services?</p>
+            <a href="index.html#contact" class="btn btn-primary">Get in Touch</a>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="footer footer-light">
+    <footer class="footer">
         <div class="container">
-            <p>&copy; 2025 Ashish Kumar Panda. All photographs are original work.</p>
+            <p>&copy; 2026 Ashish Kumar Panda. All rights reserved.</p>
             <div class="footer-social">
-                <a href="mailto:ashishpanda.edu@gmail.com"><i class="fas fa-envelope"></i></a>
-                <a href="https://github.com/ashishpanda" target="_blank"><i class="fab fa-github"></i></a>
-                <a href="https://linkedin.com/in/ashishpanda" target="_blank"><i class="fab fa-linkedin"></i></a>
-                <a href="https://www.instagram.com/ash.galleryyy/" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="https://linkedin.com" target="_blank"><i class="fab fa-linkedin"></i></a>
+                <a href="https://github.com" target="_blank"><i class="fab fa-github"></i></a>
+                <a href="https://instagram.com/ash.galleryyy" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="mailto:akp@ucsd.edu"><i class="fas fa-envelope"></i></a>
             </div>
         </div>
     </footer>
 
-    <script src="script.js"></script>
+    <script src="script-UPDATED.js"></script>
 </body>
 </html>
