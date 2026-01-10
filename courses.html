@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Courses - Ashish Kumar Panda</title>
-    <link rel="stylesheet" href="css3-var3-midnight-forest-FIXED.css">
+    <link rel="stylesheet" href="styles-emerald-cherry.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
@@ -14,15 +14,14 @@
             <div class="logo">AKP</div>
             <ul class="nav-menu">
                 <li><a href="index.html">Home</a></li>
+                <li><a href="courses.html" class="active">Courses</a></li>
                 <li class="dropdown">
-                    <a href="#" class="dropdown-toggle">Courses <i class="fas fa-chevron-down"></i></a>
+                    <a href="#" class="dropdown-toggle">More <i class="fas fa-chevron-down"></i></a>
                     <ul class="dropdown-menu">
-                        <li><a href="#graduate">Graduate Courses</a></li>
-                        <li><a href="#undergraduate">Undergraduate Courses</a></li>
-                        <li><a href="#certifications">Professional Certifications</a></li>
+                        <li><a href="extracurricular.html">Extracurricular</a></li>
+                        <li><a href="photography.html">Photography</a></li>
                     </ul>
                 </li>
-                <li><a href="extracurricular.html">Extracurricular</a></li>
             </ul>
             <div class="hamburger">
                 <span></span>
@@ -52,150 +51,108 @@
             </div>
 
             <!-- Fall 2025 -->
-            <div class="courses-category">
-                <div class="semester-header">
-                    Fall 2025
-                    <div class="gpa-info">GPA: 3.7/4.0</div>
-                </div>
+            <div class="semester-header">
+                Fall 2025
+                <div class="gpa-info">GPA: 3.7/4.0</div>
+            </div>
 
-                <div class="course-item">
-                    <div class="course-header">
-                        <span class="course-toggle">▸</span>
-                        <div class="course-title-wrapper">
-                            <div class="course-code">CSE 202 A-</div>
-                            <h3 class="course-title">Algorithm Design and Analysis</h3>
-                        </div>
-                    </div>
-                    <div class="course-details">
+            <div class="course-grid">
+                <div class="course-card">
+                    <div class="course-info">
+                        <div class="course-code">CSE 202</div>
+                        <h3>Algorithm Design and Analysis</h3>
                         <p class="course-description">Advanced algorithmic techniques including divide-and-conquer, dynamic programming, greedy algorithms, and NP-completeness. Focus on designing efficient algorithms and analyzing their complexity.</p>
-                        <p class="course-topics">Dynamic Programming, Graph Algorithms, NP-Completeness</p>
-                        <div class="course-meta">
-                            <span><i class="fas fa-book"></i> 4 Units</span>
-                            <span><i class="fas fa-user-tie"></i> Prof. Russell Impagliazzo</span>
-                        </div>
+                        <p class="course-topics">Topics: Dynamic Programming, Graph Algorithms, NP-Completeness</p>
+                    </div>
+                    <div class="course-meta">
+                        <div class="course-grade">A-</div>
+                        <div class="course-units">4 Units</div>
+                        <div class="course-professor">Prof. Russell Impagliazzo</div>
                     </div>
                 </div>
 
-                <div class="course-item">
-                    <div class="course-header">
-                        <span class="course-toggle">▸</span>
-                        <div class="course-title-wrapper">
-                            <div class="course-code">CSE 250A A-</div>
-                            <h3 class="course-title">Probabilistic Reasoning and Learning</h3>
-                        </div>
-                    </div>
-                    <div class="course-details">
+                <div class="course-card">
+                    <div class="course-info">
+                        <div class="course-code">CSE 250A</div>
+                        <h3>Probabilistic Reasoning and Learning</h3>
                         <p class="course-description">Introduction to probabilistic modeling and machine learning. Covers Bayesian networks, hidden Markov models, and probabilistic inference algorithms.</p>
-                        <p class="course-topics">Bayesian Networks, HMM, Inference</p>
-                        <div class="course-meta">
-                            <span><i class="fas fa-book"></i> 4 Units</span>
-                            <span><i class="fas fa-user-tie"></i> Prof. Lawrence Saul</span>
-                        </div>
+                        <p class="course-topics">Topics: Bayesian Networks, HMM, Inference</p>
+                    </div>
+                    <div class="course-meta">
+                        <div class="course-grade">A-</div>
+                        <div class="course-units">4 Units</div>
+                        <div class="course-professor">Prof. Lawrence Saul</div>
                     </div>
                 </div>
 
-                <div class="course-item">
-                    <div class="course-header">
-                        <span class="course-toggle">▸</span>
-                        <div class="course-title-wrapper">
-                            <div class="course-code">CSE 258 A-</div>
-                            <h3 class="course-title">Recommender Systems & Web Mining</h3>
-                        </div>
-                    </div>
-                    <div class="course-details">
+                <div class="course-card">
+                    <div class="course-info">
+                        <div class="course-code">CSE 258</div>
+                        <h3>Recommender Systems & Web Mining</h3>
                         <p class="course-description">Modern techniques in recommender systems including collaborative filtering, matrix factorization, and deep learning approaches. Covers web mining and large-scale data analysis.</p>
-                        <p class="course-topics">Collaborative Filtering, Matrix Factorization, Web Mining</p>
-                        <div class="course-meta">
-                            <span><i class="fas fa-book"></i> 4 Units</span>
-                            <span><i class="fas fa-user-tie"></i> Prof. Julian McAuley</span>
-                        </div>
+                        <p class="course-topics">Topics: Collaborative Filtering, Matrix Factorization, Web Mining</p>
+                    </div>
+                    <div class="course-meta">
+                        <div class="course-grade">A-</div>
+                        <div class="course-units">4 Units</div>
+                        <div class="course-professor">Prof. Julian McAuley</div>
                     </div>
                 </div>
             </div>
 
-            <!-- Winter 2026 -->
-            <div class="courses-category">
-                <div class="semester-header">
-                    Winter 2026
-                    <div class="gpa-info">In Progress</div>
-                </div>
+            <!-- Winter 2026 - CORRECTED: Keep CSE 220, Remove CSE 251A -->
+            <div class="semester-header">
+                Winter 2026
+                <div class="gpa-info">In Progress</div>
+            </div>
 
-                <div class="course-item">
-                    <div class="course-header">
-                        <span class="course-toggle">▸</span>
-                        <div class="course-title-wrapper">
-                            <div class="course-code">CSE 220 In Progress</div>
-                            <h3 class="course-title">Computer Architecture</h3>
-                        </div>
+            <div class="course-grid">
+                <div class="course-card">
+                    <div class="course-info">
+                        <div class="course-code">CSE 220</div>
+                        <h3>Operating Systems Principles</h3>
+                        <p class="course-description">Advanced topics in operating system design including process management, memory management, file systems, and concurrent programming. Focus on modern OS architectures and performance optimization.</p>
+                        <p class="course-topics">Topics: Process Scheduling, Virtual Memory, File Systems, Concurrency</p>
                     </div>
-                    <div class="course-details">
-                        <p class="course-description">Advanced topics in computer architecture including pipelining, memory hierarchies, parallelism, and modern processor design.</p>
-                        <p class="course-topics">Pipelining, Memory Systems, Parallel Computing</p>
-                        <div class="course-meta">
-                            <span><i class="fas fa-book"></i> 4 Units</span>
-                            <span><i class="fas fa-user-tie"></i> Prof. Dean Tullsen</span>
-                        </div>
+                    <div class="course-meta">
+                        <div class="course-grade">IP</div>
+                        <div class="course-units">4 Units</div>
+                        <div class="course-professor">Prof. Geoff Voelker</div>
                     </div>
                 </div>
 
-                <div class="course-item">
-                    <div class="course-header">
-                        <span class="course-toggle">▸</span>
-                        <div class="course-title-wrapper">
-                            <div class="course-code">CSE 250B In Progress</div>
-                            <h3 class="course-title">Machine Learning Theory</h3>
-                        </div>
-                    </div>
-                    <div class="course-details">
-                        <p class="course-description">Theoretical foundations of machine learning including PAC learning, VC dimension, and generalization bounds.</p>
-                        <p class="course-topics">PAC Learning, VC Dimension, Generalization</p>
-                        <div class="course-meta">
-                            <span><i class="fas fa-book"></i> 4 Units</span>
-                            <span><i class="fas fa-user-tie"></i> Prof. Kamalika Chaudhuri</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="course-item">
-                    <div class="course-header">
-                        <span class="course-toggle">▸</span>
-                        <div class="course-title-wrapper">
-                            <div class="course-code">CSE 282 In Progress</div>
-                            <h3 class="course-title">Computational Biology</h3>
-                        </div>
-                    </div>
-                    <div class="course-details">
+                <div class="course-card">
+                    <div class="course-info">
+                        <div class="course-code">CSE 280A</div>
+                        <h3>Algorithms/Computational Biology</h3>
                         <p class="course-description">Computational methods for analyzing biological sequences, structures, and networks. Covers sequence alignment, phylogenetics, and structural biology.</p>
-                        <p class="course-topics">Sequence Alignment, Phylogenetics, Systems Biology</p>
-                        <div class="course-meta">
-                            <span><i class="fas fa-book"></i> 4 Units</span>
-                            <span><i class="fas fa-user-tie"></i> Prof. Vineet Bafna</span>
-                        </div>
+                        <p class="course-topics">Topics: Sequence Alignment, Phylogenetics, Systems Biology</p>
+                    </div>
+                    <div class="course-meta">
+                        <div class="course-grade">IP</div>
+                        <div class="course-units">4 Units</div>
+                        <div class="course-professor">Prof. Vineet Bafna</div>
                     </div>
                 </div>
 
-                <div class="course-item">
-                    <div class="course-header">
-                        <span class="course-toggle">▸</span>
-                        <div class="course-title-wrapper">
-                            <div class="course-code">CSE 291 In Progress</div>
-                            <h3 class="course-title">Advanced Topics in AI</h3>
-                        </div>
+                <div class="course-card">
+                    <div class="course-info">
+                        <div class="course-code">CSE 291A</div>
+                        <h3>Topics in AI</h3>
+                        <p class="course-description">Current research topics in artificial intelligence including AI agents, large language models, multimodal learning, and advanced neural architectures.</p>
+                        <p class="course-topics">Topics: AI Agents, LLMs, Multimodal AI, Advanced Neural Networks</p>
                     </div>
-                    <div class="course-details">
-                        <p class="course-description">Current research topics in artificial intelligence including large language models, multimodal learning, and AI safety.</p>
-                        <p class="course-topics">LLMs, Multimodal AI, AI Safety</p>
-                        <div class="course-meta">
-                            <span><i class="fas fa-book"></i> 4 Units</span>
-                            <span><i class="fas fa-user-tie"></i> Prof. Jingbo Shang</span>
-                        </div>
+                    <div class="course-meta">
+                        <div class="course-grade">IP</div>
+                        <div class="course-units">4 Units</div>
+                        <div class="course-professor">Prof. Jingbo Shang</div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Undergraduate Courses -->
+    <!-- Undergraduate Courses - Same Layout with Grades -->
     <section id="undergraduate" class="projects">
         <div class="container">
             <div class="section-header">
@@ -207,157 +164,195 @@
             </div>
 
             <!-- Computer Science & AI -->
-            <div class="courses-category">
-                <div class="category-header">
-                    <i class="category-icon fas fa-laptop-code"></i>
-                    <h3 class="category-title">Computer Science & AI</h3>
-                    <span class="category-toggle">▸</span>
+            <div class="category-header-simple">
+                <i class="category-icon-simple fas fa-laptop-code"></i>
+                Computer Science & AI
+            </div>
+
+            <div class="course-grid">
+                <div class="course-card">
+                    <div class="course-info">
+                        <div class="course-code">CS201</div>
+                        <h3>Data Structures & Algorithms</h3>
+                        <p class="course-description">Fundamental data structures including arrays, linked lists, trees, graphs, and their algorithms. Analysis of time and space complexity.</p>
+                    </div>
+                    <div class="course-meta">
+                        <div class="course-grade">9.8</div>
+                        <div class="course-units">4 Credits</div>
+                    </div>
                 </div>
-                <ul class="courses-list">
-                    <li class="course-item">
-                        <div class="course-header">
-                            <span class="course-toggle">▸</span>
-                            <div class="course-title-wrapper">
-                                <div class="course-code">CS201</div>
-                                <h3 class="course-title">Data Structures & Algorithms</h3>
-                            </div>
-                        </div>
-                        <div class="course-details">
-                            <p class="course-description">Fundamental data structures including arrays, linked lists, trees, graphs, and their algorithms. Analysis of time and space complexity.</p>
-                        </div>
-                    </li>
-                    <li class="course-item">
-                        <div class="course-header">
-                            <span class="course-toggle">▸</span>
-                            <div class="course-title-wrapper">
-                                <div class="course-code">CS202</div>
-                                <h3 class="course-title">Object-Oriented Programming</h3>
-                            </div>
-                        </div>
-                        <div class="course-details">
-                            <p class="course-description">Principles of OOP using C++ and Java. Covered inheritance, polymorphism, encapsulation, and design patterns.</p>
-                        </div>
-                    </li>
-                    <li class="course-item">
-                        <div class="course-header">
-                            <span class="course-toggle">▸</span>
-                            <div class="course-title-wrapper">
-                                <div class="course-code">CS301</div>
-                                <h3 class="course-title">Database Management Systems</h3>
-                            </div>
-                        </div>
-                        <div class="course-details">
-                            <p class="course-description">Relational database design, SQL, normalization, transactions, and database administration.</p>
-                        </div>
-                    </li>
-                    <li class="course-item">
-                        <div class="course-header">
-                            <span class="course-toggle">▸</span>
-                            <div class="course-title-wrapper">
-                                <div class="course-code">CS401</div>
-                                <h3 class="course-title">Machine Learning</h3>
-                            </div>
-                        </div>
-                        <div class="course-details">
-                            <p class="course-description">Introduction to ML algorithms including regression, classification, clustering, and neural networks.</p>
-                        </div>
-                    </li>
-                    <li class="course-item">
-                        <div class="course-header">
-                            <span class="course-toggle">▸</span>
-                            <div class="course-title-wrapper">
-                                <div class="course-code">CS402</div>
-                                <h3 class="course-title">Deep Learning</h3>
-                            </div>
-                        </div>
-                        <div class="course-details">
-                            <p class="course-description">Neural network architectures including CNNs, RNNs, transformers, and their applications in computer vision and NLP.</p>
-                        </div>
-                    </li>
-                    <li class="course-item">
-                        <div class="course-header">
-                            <span class="course-toggle">▸</span>
-                            <div class="course-title-wrapper">
-                                <div class="course-code">CS403</div>
-                                <h3 class="course-title">Computer Vision</h3>
-                            </div>
-                        </div>
-                        <div class="course-details">
-                            <p class="course-description">Image processing, feature detection, object recognition, and deep learning for vision tasks.</p>
-                        </div>
-                    </li>
-                    <li class="course-item">
-                        <div class="course-header">
-                            <span class="course-toggle">▸</span>
-                            <div class="course-title-wrapper">
-                                <div class="course-code">CS404</div>
-                                <h3 class="course-title">Natural Language Processing</h3>
-                            </div>
-                        </div>
-                        <div class="course-details">
-                            <p class="course-description">Text processing, language models, sentiment analysis, and transformer-based NLP applications.</p>
-                        </div>
-                    </li>
-                    <li class="course-item">
-                        <div class="course-header">
-                            <span class="course-toggle">▸</span>
-                            <div class="course-title-wrapper">
-                                <div class="course-code">CS405</div>
-                                <h3 class="course-title">Artificial Intelligence</h3>
-                            </div>
-                        </div>
-                        <div class="course-details">
-                            <p class="course-description">Search algorithms, knowledge representation, planning, and reasoning in AI systems.</p>
-                        </div>
-                    </li>
-                </ul>
+
+                <div class="course-card">
+                    <div class="course-info">
+                        <div class="course-code">CS202</div>
+                        <h3>Object-Oriented Programming</h3>
+                        <p class="course-description">Principles of OOP using C++ and Java. Covered inheritance, polymorphism, encapsulation, and design patterns.</p>
+                    </div>
+                    <div class="course-meta">
+                        <div class="course-grade">9.5</div>
+                        <div class="course-units">4 Credits</div>
+                    </div>
+                </div>
+
+                <div class="course-card">
+                    <div class="course-info">
+                        <div class="course-code">CS301</div>
+                        <h3>Database Management Systems</h3>
+                        <p class="course-description">Relational database design, SQL, normalization, transactions, and database administration.</p>
+                    </div>
+                    <div class="course-meta">
+                        <div class="course-grade">9.6</div>
+                        <div class="course-units">3 Credits</div>
+                    </div>
+                </div>
+
+                <div class="course-card">
+                    <div class="course-info">
+                        <div class="course-code">CS401</div>
+                        <h3>Machine Learning</h3>
+                        <p class="course-description">Introduction to ML algorithms including regression, classification, clustering, and neural networks.</p>
+                    </div>
+                    <div class="course-meta">
+                        <div class="course-grade">9.9</div>
+                        <div class="course-units">4 Credits</div>
+                    </div>
+                </div>
+
+                <div class="course-card">
+                    <div class="course-info">
+                        <div class="course-code">CS402</div>
+                        <h3>Deep Learning</h3>
+                        <p class="course-description">Neural network architectures including CNNs, RNNs, transformers, and their applications in computer vision and NLP.</p>
+                    </div>
+                    <div class="course-meta">
+                        <div class="course-grade">9.7</div>
+                        <div class="course-units">4 Credits</div>
+                    </div>
+                </div>
+
+                <div class="course-card">
+                    <div class="course-info">
+                        <div class="course-code">CS403</div>
+                        <h3>Computer Vision</h3>
+                        <p class="course-description">Image processing, feature detection, object recognition, and deep learning for vision tasks.</p>
+                    </div>
+                    <div class="course-meta">
+                        <div class="course-grade">9.8</div>
+                        <div class="course-units">3 Credits</div>
+                    </div>
+                </div>
+
+                <div class="course-card">
+                    <div class="course-info">
+                        <div class="course-code">CS404</div>
+                        <h3>Natural Language Processing</h3>
+                        <p class="course-description">Text processing, language models, sentiment analysis, and transformer-based NLP applications.</p>
+                    </div>
+                    <div class="course-meta">
+                        <div class="course-grade">9.6</div>
+                        <div class="course-units">3 Credits</div>
+                    </div>
+                </div>
+
+                <div class="course-card">
+                    <div class="course-info">
+                        <div class="course-code">CS405</div>
+                        <h3>Artificial Intelligence</h3>
+                        <p class="course-description">Search algorithms, knowledge representation, planning, and reasoning in AI systems.</p>
+                    </div>
+                    <div class="course-meta">
+                        <div class="course-grade">9.5</div>
+                        <div class="course-units">4 Credits</div>
+                    </div>
+                </div>
             </div>
 
             <!-- Mathematics -->
-            <div class="courses-category">
-                <div class="category-header">
-                    <i class="category-icon fas fa-square-root-alt"></i>
-                    <h3 class="category-title">Mathematics</h3>
-                    <span class="category-toggle">▸</span>
+            <div class="category-header-simple">
+                <i class="category-icon-simple fas fa-square-root-alt"></i>
+                Mathematics
+            </div>
+
+            <div class="course-grid">
+                <div class="course-card">
+                    <div class="course-info">
+                        <div class="course-code">MATH201</div>
+                        <h3>Linear Algebra</h3>
+                        <p class="course-description">Vector spaces, matrices, eigenvalues, and applications in data science.</p>
+                    </div>
+                    <div class="course-meta">
+                        <div class="course-grade">9.4</div>
+                        <div class="course-units">4 Credits</div>
+                    </div>
                 </div>
-                <ul class="courses-list">
-                    <li class="course-item">
-                        <div class="course-header">
-                            <span class="course-toggle">▸</span>
-                            <div class="course-title-wrapper">
-                                <div class="course-code">MATH201</div>
-                                <h3 class="course-title">Linear Algebra</h3>
-                            </div>
-                        </div>
-                        <div class="course-details">
-                            <p class="course-description">Vector spaces, matrices, eigenvalues, and applications in data science.</p>
-                        </div>
-                    </li>
-                    <li class="course-item">
-                        <div class="course-header">
-                            <span class="course-toggle">▸</span>
-                            <div class="course-title-wrapper">
-                                <div class="course-code">MATH202</div>
-                                <h3 class="course-title">Probability & Statistics</h3>
-                            </div>
-                        </div>
-                        <div class="course-details">
-                            <p class="course-description">Probability distributions, statistical inference, hypothesis testing, and Bayesian methods.</p>
-                        </div>
-                    </li>
-                    <li class="course-item">
-                        <div class="course-header">
-                            <span class="course-toggle">▸</span>
-                            <div class="course-title-wrapper">
-                                <div class="course-code">MATH301</div>
-                                <h3 class="course-title">Numerical Methods</h3>
-                            </div>
-                        </div>
-                        <div class="course-details">
-                            <p class="course-description">Numerical solutions to differential equations, optimization, and computational mathematics.</p>
-                        </div>
-                    </li>
-                </ul>
+
+                <div class="course-card">
+                    <div class="course-info">
+                        <div class="course-code">MATH202</div>
+                        <h3>Probability & Statistics</h3>
+                        <p class="course-description">Probability distributions, statistical inference, hypothesis testing, and Bayesian methods.</p>
+                    </div>
+                    <div class="course-meta">
+                        <div class="course-grade">9.6</div>
+                        <div class="course-units">4 Credits</div>
+                    </div>
+                </div>
+
+                <div class="course-card">
+                    <div class="course-info">
+                        <div class="course-code">MATH301</div>
+                        <h3>Numerical Methods</h3>
+                        <p class="course-description">Numerical solutions to differential equations, optimization, and computational mathematics.</p>
+                    </div>
+                    <div class="course-meta">
+                        <div class="course-grade">9.3</div>
+                        <div class="course-units">3 Credits</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Electrical Engineering Core -->
+            <div class="category-header-simple">
+                <i class="category-icon-simple fas fa-bolt"></i>
+                Electrical Engineering
+            </div>
+
+            <div class="course-grid">
+                <div class="course-card">
+                    <div class="course-info">
+                        <div class="course-code">EE201</div>
+                        <h3>Circuit Theory</h3>
+                        <p class="course-description">Network analysis, AC/DC circuits, Thevenin's and Norton's theorems, and circuit design.</p>
+                    </div>
+                    <div class="course-meta">
+                        <div class="course-grade">9.2</div>
+                        <div class="course-units">4 Credits</div>
+                    </div>
+                </div>
+
+                <div class="course-card">
+                    <div class="course-info">
+                        <div class="course-code">EE301</div>
+                        <h3>Digital Signal Processing</h3>
+                        <p class="course-description">Z-transforms, FFT, digital filters, and signal analysis techniques.</p>
+                    </div>
+                    <div class="course-meta">
+                        <div class="course-grade">9.5</div>
+                        <div class="course-units">4 Credits</div>
+                    </div>
+                </div>
+
+                <div class="course-card">
+                    <div class="course-info">
+                        <div class="course-code">EE401</div>
+                        <h3>Control Systems</h3>
+                        <p class="course-description">System modeling, stability analysis, PID controllers, and state-space methods.</p>
+                    </div>
+                    <div class="course-meta">
+                        <div class="course-grade">9.4</div>
+                        <div class="course-units">4 Credits</div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -470,22 +465,6 @@
                         <span>S3</span>
                         <span>EC2</span>
                         <span>Lambda</span>
-                    </div>
-                </div>
-
-                <div class="project-card">
-                    <div class="project-header">
-                        <i class="fas fa-chart-line"></i>
-                        <h3>Applied Data Science with Python</h3>
-                    </div>
-                    <p><strong>Platform:</strong> University of Michigan</p>
-                    <p><strong>Instructor:</strong> Christopher Brooks</p>
-                    <p><strong>Completed:</strong> Sep 2021 | 3 months</p>
-                    <div class="project-tech">
-                        <span>Pandas</span>
-                        <span>Data Visualization</span>
-                        <span>Machine Learning</span>
-                        <span>Social Network Analysis</span>
                     </div>
                 </div>
             </div>

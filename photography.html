@@ -4,118 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Photography - Ashish Kumar Panda</title>
-    <link rel="stylesheet" href="css3-var3-midnight-forest-FIXED.css">
+    <link rel="stylesheet" href="styles-emerald-cherry.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <style>
-        /* Lightbox styles */
-        .lightbox {
-            position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: rgba(10, 18, 21, 0.95);
-            z-index: 10000;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            animation: fadeIn 0.3s ease;
-        }
-
-        @keyframes fadeIn {
-            from { opacity: 0; }
-            to { opacity: 1; }
-        }
-
-        .lightbox-content {
-            max-width: 90%;
-            max-height: 90vh;
-            position: relative;
-        }
-
-        .lightbox-content img {
-            max-width: 100%;
-            max-height: 80vh;
-            object-fit: contain;
-            border: 1px solid var(--copper);
-        }
-
-        .lightbox-close {
-            position: absolute;
-            top: -40px;
-            right: 0;
-            font-size: 2.5rem;
-            color: var(--copper);
-            cursor: pointer;
-            transition: all 0.3s;
-            width: 40px;
-            height: 40px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-        .lightbox-close:hover {
-            color: var(--soft-white);
-            transform: rotate(90deg);
-        }
-
-        .lightbox-caption {
-            margin-top: 1.5rem;
-            text-align: center;
-        }
-
-        .lightbox-caption h3 {
-            font-size: 1.3rem;
-            color: var(--copper);
-            margin-bottom: 0.5rem;
-            font-weight: 400;
-        }
-
-        .lightbox-caption p {
-            font-size: 0.95rem;
-            color: var(--sage);
-            font-weight: 300;
-        }
-
-        /* Instagram embed section */
-        .instagram-section {
-            background: var(--forest-dark);
-            padding: 80px 0;
-        }
-
-        .instagram-embed {
-            max-width: 540px;
-            margin: 3rem auto;
-            text-align: center;
-        }
-
-        .instagram-cta {
-            text-align: center;
-            margin-top: 2rem;
-        }
-
-        .instagram-link {
-            display: inline-flex;
-            align-items: center;
-            gap: 0.75rem;
-            padding: 1rem 2rem;
-            background: transparent;
-            border: 1px solid var(--copper);
-            border-radius: 2px;
-            color: var(--copper);
-            text-decoration: none;
-            font-size: 1rem;
-            transition: all 0.3s;
-            letter-spacing: 0.5px;
-        }
-
-        .instagram-link:hover {
-            background: var(--copper);
-            color: var(--midnight);
-            transform: translateY(-2px);
-        }
-    </style>
 </head>
 <body>
     <!-- Navigation -->
@@ -124,15 +14,14 @@
             <div class="logo">AKP</div>
             <ul class="nav-menu">
                 <li><a href="index.html">Home</a></li>
+                <li><a href="courses.html">Courses</a></li>
                 <li class="dropdown">
-                    <a href="#" class="dropdown-toggle">Courses <i class="fas fa-chevron-down"></i></a>
+                    <a href="#" class="dropdown-toggle">More <i class="fas fa-chevron-down"></i></a>
                     <ul class="dropdown-menu">
-                        <li><a href="courses.html#graduate">Graduate Courses</a></li>
-                        <li><a href="courses.html#undergraduate">Undergraduate Courses</a></li>
-                        <li><a href="courses.html#certifications">Certifications</a></li>
+                        <li><a href="extracurricular.html">Extracurricular</a></li>
+                        <li><a href="photography.html" class="active">Photography</a></li>
                     </ul>
                 </li>
-                <li><a href="extracurricular.html">Extracurricular</a></li>
             </ul>
             <div class="hamburger">
                 <span></span>
@@ -168,15 +57,15 @@
         </div>
     </section>
 
-    <!-- Instagram Feed -->
-    <section class="instagram-section">
+    <!-- Instagram Feed Section -->
+    <section class="projects" style="padding: 80px 0;">
         <div class="container">
             <h2 class="section-title">Latest from Instagram</h2>
-            <p style="text-align: center; color: var(--sage); margin-bottom: 2rem; font-weight: 300;">Follow @ash.galleryyy for daily updates</p>
+            <p style="text-align: center; color: var(--light-gray); margin-bottom: 3rem; font-weight: 300;">Follow @ash.galleryyy for daily updates</p>
 
-            <div class="instagram-embed">
-                <!-- Instagram embed widget placeholder -->
-                <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/ash.galleryyy/" data-instgrm-version="14" style="background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:540px; min-width:326px; padding:0; width:99.375%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px);">
+            <div style="max-width: 540px; margin: 0 auto; text-align: center;">
+                <!-- Instagram embed widget -->
+                <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/ash.galleryyy/" data-instgrm-version="14" style="background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px auto; max-width:540px; min-width:326px; padding:0; width:99.375%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px);">
                     <div style="padding:16px;">
                         <a href="https://www.instagram.com/ash.galleryyy/" style="background:#FFFFFF; line-height:0; padding:0 0; text-align:center; text-decoration:none; width:100%;" target="_blank">
                             <div style="display: flex; flex-direction: row; align-items: center;">
@@ -193,23 +82,23 @@
                     </div>
                 </blockquote>
                 <script async src="//www.instagram.com/embed.js"></script>
-            </div>
 
-            <div class="instagram-cta">
-                <a href="https://www.instagram.com/ash.galleryyy/" target="_blank" class="instagram-link">
-                    <i class="fab fa-instagram"></i>
-                    Visit Instagram Profile
-                </a>
-                <p style="margin-top: 1rem; color: var(--sage); font-size: 0.9rem; font-weight: 300;">Widget not loading? Visit my Instagram page directly</p>
+                <div style="margin-top: 2rem;">
+                    <a href="https://www.instagram.com/ash.galleryyy/" target="_blank" class="btn btn-primary" style="display: inline-flex; align-items: center; gap: 0.75rem;">
+                        <i class="fab fa-instagram"></i>
+                        Visit Instagram Profile
+                    </a>
+                    <p style="margin-top: 1rem; color: var(--light-gray); font-size: 0.9rem; font-weight: 300;">Widget not loading? Visit my Instagram page directly</p>
+                </div>
             </div>
         </div>
     </section>
 
     <!-- Gallery Section -->
-    <section id="gallery" class="projects">
+    <section id="gallery" class="about">
         <div class="container">
             <h2 class="section-title">Featured Works</h2>
-            <p style="text-align: center; color: var(--sage); margin-bottom: 3rem; font-weight: 300;">Selected photographs highlighting different styles and moments</p>
+            <p style="text-align: center; color: var(--light-gray); margin-bottom: 3rem; font-weight: 300;">Selected photographs highlighting different styles and moments</p>
 
             <div class="gallery-grid">
                 <!-- Event Photography -->
@@ -273,7 +162,7 @@
     <section class="contact">
         <div class="container" style="text-align: center;">
             <h2 class="section-title">Let's Create Together</h2>
-            <p style="color: var(--sage); margin-bottom: 2rem; font-size: 1.1rem; font-weight: 300;">Interested in collaborating or need photography services?</p>
+            <p style="color: var(--light-gray); margin-bottom: 2rem; font-size: 1.1rem; font-weight: 300;">Interested in collaborating or need photography services?</p>
             <a href="index.html#contact" class="btn btn-primary">Get in Touch</a>
         </div>
     </section>
