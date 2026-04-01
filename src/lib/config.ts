@@ -47,7 +47,7 @@ export const experience = [
 
 export const projects = [
   {
-    title: "Diabetic Retinopathy Segmentation",
+    title: "Retinal Vessel Segmentation",
     description: "Developed a Residual U-Net model for early detection of diabetic retinopathy, achieving an AUC of 0.9667 using Python, Keras, and OpenCV.",
     imageKey: "project-retinal"
   },
