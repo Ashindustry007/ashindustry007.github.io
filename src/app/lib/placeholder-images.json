@@ -1,4 +1,3 @@
-
 {
   "placeholderImages": [
     {
@@ -28,32 +27,20 @@
     {
       "id": "photography-thumbnail",
       "description": "Photography portfolio preview",
-      "imageUrl": "https://picsum.photos/seed/cinema-photo/1200/800",
-      "imageHint": "camera lens"
+      "imageUrl": "https://uobfpmgknyqxdsdvqcfe.supabase.co/storage/v1/object/public/Portfolio/Whisk_2fef7c40d3875ff89344a9b2ecb13813eg-ezgif.com-png-to-webp-converter.webp",
+      "imageHint": "cinema photo"
     },
     {
       "id": "extracurricular-thumbnail",
       "description": "Beyond the classroom activities",
-      "imageUrl": "https://picsum.photos/seed/adventure-extra/1200/800",
-      "imageHint": "mountain hiking"
+      "imageUrl": "https://uobfpmgknyqxdsdvqcfe.supabase.co/storage/v1/object/public/Portfolio/Whisk_050fef88eeb28d78dd1491ef96f1ce80dr-ezgif.com-png-to-webp-converter.webp",
+      "imageHint": "adventure extra"
     },
     {
       "id": "academic-thumbnail",
       "description": "Academic foundation and courses",
       "imageUrl": "https://uobfpmgknyqxdsdvqcfe.supabase.co/storage/v1/object/public/Portfolio/Whisk_9e7edf211d8733c81c5432ff8a458bebeg-ezgif.com-png-to-webp-converter.webp",
-      "imageHint": "modern library"
-    },
-    {
-      "id": "courses-bg",
-      "description": "Cinematic developer workstation background",
-      "imageUrl": "https://uobfpmgknyqxdsdvqcfe.supabase.co/storage/v1/object/public/Portfolio/Whisk_f82dab339ee581d98b64e81ba16dadbdeg-ezgif.com-png-to-webp-converter.webp",
-      "imageHint": "developer workstation"
-    },
-    {
-      "id": "extracurriculars-bg",
-      "description": "Cinematic artistic background for extracurriculars",
-      "imageUrl": "https://uobfpmgknyqxdsdvqcfe.supabase.co/storage/v1/object/public/Portfolio/Whisk_e2dcaa7c302f8248dbc4a95e628ab799eg-ezgif.com-png-to-webp-converter.webp",
-      "imageHint": "artistic setup"
+      "imageHint": "campus library"
     }
   ]
 }
