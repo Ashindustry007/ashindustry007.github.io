@@ -1,4 +1,3 @@
-
 {
   "placeholderImages": [
     {
@@ -46,7 +45,7 @@
     {
       "id": "courses-bg",
       "description": "Cinematic developer workstation background",
-      "imageUrl": "https://picsum.photos/seed/developer-setup/1920/1080",
+      "imageUrl": "https://uobfpmgknyqxdsdvqcfe.supabase.co/storage/v1/object/public/Portfolio/Whisk_f82dab339ee581d98b64e81ba16dadbdeg-ezgif.com-png-to-webp-converter.webp",
       "imageHint": "developer workstation"
     }
   ]

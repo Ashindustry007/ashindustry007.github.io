@@ -1,4 +1,3 @@
-
 "use client";
 
 import { academicData } from "@/lib/config";
@@ -20,11 +19,10 @@ export default function CoursesPage() {
           src={bgImage?.imageUrl || ""}
           alt="Background"
           fill
-          className="object-cover opacity-20 grayscale brightness-50"
+          className="object-cover opacity-30 grayscale brightness-[0.4]"
           priority
-          data-ai-hint={bgImage?.imageHint}
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-background via-background/80 to-background" />
+        <div className="absolute inset-0 bg-gradient-to-b from-background via-background/90 to-background" />
       </div>
 
       {/* Navigation Header */}
@@ -98,8 +96,8 @@ export default function CoursesPage() {
                       <div className="flex justify-between items-start mb-6">
                         <h3 className="text-xl font-headline font-bold text-white group-hover:text-primary transition-colors">{term.id}</h3>
                         <div className="text-right">
-                          <span className="text-[10px] text-primary/40 font-mono uppercase tracking-widest block">Term GPA</span>
-                          <p className="text-sm font-mono font-bold text-white/60">{term.gpa}</p>
+                          <span className="text-[10px] text-primary/40 font-mono uppercase tracking-widest block">Term Status</span>
+                          <p className="text-sm font-mono font-bold text-white/60">{term.id.includes('Spring') ? 'In Progress' : 'Completed'}</p>
                         </div>
                       </div>
                       <ul className="space-y-3">
@@ -189,39 +187,6 @@ export default function CoursesPage() {
                   )}
                 </div>
               ))}
-            </div>
-          </div>
-        </section>
-
-        {/* Featured Highlights */}
-        <section className="py-24 px-8 border-t border-white/5">
-          <div className="max-w-7xl mx-auto grid md:grid-cols-3 gap-12">
-            <div className="flex gap-6">
-              <div className="h-12 w-12 shrink-0 rounded-full bg-primary/10 flex items-center justify-center border border-primary/20">
-                <GraduationCap className="text-primary" size={20} />
-              </div>
-              <div className="space-y-2">
-                <h4 className="font-headline font-bold text-white uppercase tracking-wider">AI Specialization</h4>
-                <p className="text-xs text-muted-foreground leading-relaxed">Advanced focus on Recommender Systems, Probabilistic Learning, and Computer Vision at UCSD graduate level.</p>
-              </div>
-            </div>
-            <div className="flex gap-6">
-              <div className="h-12 w-12 shrink-0 rounded-full bg-primary/10 flex items-center justify-center border border-primary/20">
-                <BookOpen className="text-primary" size={20} />
-              </div>
-              <div className="space-y-2">
-                <h4 className="font-headline font-bold text-white uppercase tracking-wider">Research Breadth</h4>
-                <p className="text-xs text-muted-foreground leading-relaxed">Cross-disciplinary research bridging Electrical Engineering with deep learning and computational biology.</p>
-              </div>
-            </div>
-            <div className="flex gap-6">
-              <div className="h-12 w-12 shrink-0 rounded-full bg-primary/10 flex items-center justify-center border border-primary/20">
-                <Layers className="text-primary" size={20} />
-              </div>
-              <div className="space-y-2">
-                <h4 className="font-headline font-bold text-white uppercase tracking-wider">Systems Mastery</h4>
-                <p className="text-xs text-muted-foreground leading-relaxed">Deep understanding of high-performance operating systems and scalable algorithm design for AI systems.</p>
-              </div>
             </div>
           </div>
         </section>
