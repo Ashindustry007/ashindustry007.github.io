@@ -6,12 +6,10 @@ import { Footer } from "@/components/footer";
 import { ArrowLeft, Award, Heart, Camera, Code } from "lucide-react";
 import Link from "next/link";
 import { motion, useScroll, useTransform } from "framer-motion";
-import { PlaceHolderImages } from "@/lib/placeholder-images";
 
 export default function ExtracurricularsPage() {
   const { scrollY } = useScroll();
   const bgOpacity = useTransform(scrollY, [0, 600], [1, 0.1]);
-  const bgImage = PlaceHolderImages.find(img => img.id === "extracurriculars-bg");
 
   const getIcon = (category: string) => {
     switch (category) {
@@ -28,7 +26,7 @@ export default function ExtracurricularsPage() {
       <motion.div 
         className="fixed inset-0 z-0 bg-cover bg-center"
         style={{ 
-          backgroundImage: `url('${bgImage?.imageUrl}')`,
+          backgroundImage: `url('https://uobfpmgknyqxdsdvqcfe.supabase.co/storage/v1/object/public/Portfolio/Whisk_e2dcaa7c302f8248dbc4a95e628ab799eg-ezgif.com-png-to-webp-converter.webp')`,
           opacity: bgOpacity 
         }}
       />
@@ -37,7 +35,7 @@ export default function ExtracurricularsPage() {
       {/* Bottom fade gradient */}
       <div className="fixed inset-0 z-0 bg-gradient-to-b from-transparent to-black/80 pointer-events-none" />
 
-      {/* Content Layer */}
+      {/* Wrapped Content Layer */}
       <div className="relative z-10">
         {/* Navigation Header */}
         <header className="sticky top-0 z-50 w-full border-b border-white/5 bg-background/80 backdrop-blur-md">
