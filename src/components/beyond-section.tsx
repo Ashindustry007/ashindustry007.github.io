@@ -46,10 +46,10 @@ export function BeyondSection() {
                 alt={cat.title}
                 fill
                 unoptimized={true}
-                className="absolute inset-0 w-full h-full object-cover object-center grayscale hover:grayscale-0 transition-all duration-1000 group-hover:scale-110"
+                className="absolute inset-0 w-full h-full object-cover object-center grayscale group-hover:grayscale-0 transition-all duration-700 group-hover:scale-110"
                 data-ai-hint={cat.imageHint}
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-background/80 via-background/20 to-transparent p-8 flex flex-col justify-end">
+              <div className="absolute inset-0 bg-gradient-to-t from-background/60 via-background/10 to-transparent p-8 flex flex-col justify-end">
                 <div className="flex justify-between items-end">
                   <div className="space-y-2">
                     <h3 className="text-2xl font-headline font-bold text-white group-hover:text-primary transition-colors">
