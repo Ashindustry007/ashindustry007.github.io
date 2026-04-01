@@ -40,7 +40,7 @@ export function BeyondSection() {
           {categories.map((cat, idx) => {
             const imgData = PlaceHolderImages.find(img => img.id === cat.imageKey);
             return (
-              <Link key={idx} href={cat.link} className="group relative h-[450px] overflow-hidden rounded-2xl block">
+              <Link key={idx} href={cat.link} className="group relative aspect-[4/5] overflow-hidden rounded-2xl block">
                 <Image
                   src={imgData?.imageUrl || ""}
                   alt={cat.title}
