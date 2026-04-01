@@ -8,31 +8,41 @@ import Link from "next/link";
 import Image from "next/image";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { PlaceHolderImages } from "@/lib/placeholder-images";
+import { motion, useScroll, useTransform } from "framer-motion";
 
 export default function CoursesPage() {
+  const { scrollY } = useScroll();
+  const bgOpacity = useTransform(scrollY, [0, 600], [1, 0.1]);
   const bgImage = PlaceHolderImages.find(img => img.id === "courses-bg");
 
   return (
     <main className="relative min-h-screen bg-background text-foreground selection:bg-primary selection:text-primary-foreground">
-      {/* Background Layer */}
-      <div className="fixed inset-0 z-0 bg-background" />
+      {/* Background Layers */}
+      <motion.div 
+        className="fixed inset-0 z-0 bg-cover bg-center"
+        style={{ 
+          backgroundImage: `url('https://uobfpmgknyqxdsdvqcfe.supabase.co/storage/v1/object/public/Portfolio/Whisk_f82dab339ee581d98b64e81ba16dadbdeg-ezgif.com-png-to-webp-converter.webp')`,
+          opacity: bgOpacity 
+        }}
+      />
+      <div className="fixed inset-0 z-0 bg-gradient-to-b from-transparent to-black/80 pointer-events-none" />
 
-      {/* Navigation Header */}
-      <header className="sticky top-0 z-50 w-full border-b border-white/5 bg-background/80 backdrop-blur-md">
-        <div className="max-w-7xl mx-auto px-8 h-20 flex items-center justify-between">
-          <Link href="/" className="group flex items-center gap-2 text-xs font-mono uppercase tracking-[0.2em] text-muted-foreground hover:text-primary transition-colors">
-            <ArrowLeft size={14} className="group-hover:-translate-x-1 transition-transform" />
-            Back to Portfolio
-          </Link>
-          <div className="text-[10px] font-mono uppercase tracking-[0.3em] text-primary">
-            Academic Foundation
-          </div>
-        </div>
-      </header>
-
-      {/* Content Layer */}
+      {/* Wrapped Content Layer */}
       <div className="relative z-10">
-        {/* Hero Section with Custom Background */}
+        {/* Navigation Header */}
+        <header className="sticky top-0 z-50 w-full border-b border-white/5 bg-background/80 backdrop-blur-md">
+          <div className="max-w-7xl mx-auto px-8 h-20 flex items-center justify-between">
+            <Link href="/" className="group flex items-center gap-2 text-xs font-mono uppercase tracking-[0.2em] text-muted-foreground hover:text-primary transition-colors">
+              <ArrowLeft size={14} className="group-hover:-translate-x-1 transition-transform" />
+              Back to Portfolio
+            </Link>
+            <div className="text-[10px] font-mono uppercase tracking-[0.3em] text-primary">
+              Academic Foundation
+            </div>
+          </div>
+        </header>
+
+        {/* Hero Section */}
         <section className="relative py-32 px-8 border-b border-white/5 overflow-hidden">
           {bgImage?.imageUrl && (
             <div className="absolute inset-0 z-0">
