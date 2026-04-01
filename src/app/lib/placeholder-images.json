@@ -1,9 +1,10 @@
+
 {
   "placeholderImages": [
     {
       "id": "avatar",
       "description": "Portrait of Ashish Kumar Panda",
-      "imageUrl": "https://picsum.photos/seed/ashish-portrait/800/800",
+      "imageUrl": "https://uobfpmgknyqxdsdvqcfe.supabase.co/storage/v1/object/public/Portfolio/Whisk_10337cfa6353d339fb244045bb2d450ddr-ezgif.com-png-to-webp-converter.webp",
       "imageHint": "man portrait"
     },
     {
