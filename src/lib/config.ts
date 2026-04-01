@@ -2,9 +2,9 @@
 export const siteConfig = {
   name: "Ashish Kumar",
   surname: "Panda",
-  tagline: "AI Engineer & MSCS Student",
-  intro: "MSCS student at UC San Diego specializing in PyTorch, deep learning, and scalable ML pipelines to solve complex real-world problems.",
-  subheadline: "Engineering Intelligent Systems & AI-Driven Applications.",
+  tagline: "CAT — Coder | Artist | Traveler",
+  intro: "MSCS student at UC San Diego. AI Engineer building the future of intelligent systems through computer vision and agentic architectures.",
+  subheadline: "Engineering Intelligence.",
   accentColor: "#FF8000",
   socials: {
     github: "https://github.com/Ashindustry007",
