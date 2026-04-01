@@ -19,10 +19,10 @@
       "imageHint": "audio waveform"
     },
     {
-      "id": "project-rag",
-      "description": "Multi-Agent Systems & RAG Architecture Diagram",
-      "imageUrl": "https://picsum.photos/seed/ai-graph/1200/800",
-      "imageHint": "neural network"
+      "id": "project-population",
+      "description": "Deep Learning for Population Growth Prediction",
+      "imageUrl": "https://picsum.photos/seed/genetic-dna/1200/800",
+      "imageHint": "dna science"
     },
     {
       "id": "photography-thumbnail",

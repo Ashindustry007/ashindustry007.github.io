@@ -57,9 +57,9 @@ export const projects = [
     imageKey: "project-vocal"
   },
   {
-    title: "Multi-Agent RAG Systems",
-    description: "Scalable RAG architectures for enterprise knowledge retrieval, utilizing self-attention mechanisms to prioritize relevant data points in high-dimensional space.",
-    imageKey: "project-rag"
+    title: "Population Growth Prediction",
+    description: "Deep learning pipeline to predict exponential growth rates from genetic data. Benchmarked ANNs against Deep Transformer and MultiTask Learning architectures to solve data sparsity in SNP matrices.",
+    imageKey: "project-population"
   }
 ];
 
