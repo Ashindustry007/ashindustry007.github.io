@@ -24,7 +24,7 @@ export default function PhotographyPage() {
   const [isFallback, setIsFallback] = useState(false);
   
   const { scrollY } = useScroll();
-  const bgOpacity = useTransform(scrollY, [0, 600], [1, 0.3]);
+  const bgOpacity = useTransform(scrollY, [0, 600], [1, 0.1]);
 
   useEffect(() => {
     async function fetchFeed() {
@@ -63,11 +63,10 @@ export default function PhotographyPage() {
       <motion.div 
         className="fixed inset-0 z-0 bg-cover bg-center"
         style={{ 
-          backgroundImage: `url('https://uobfpmgknyqxdsdvqcfe.supabase.co/storage/v1/object/public/Portfolio/Whisk_e2dcaa7c302f8248dbc4a95e628ab799eg-ezgif.com-png-to-webp-converter.webp')`,
+          backgroundImage: `url('https://uobfpmgknyqxdsdvqcfe.supabase.co/storage/v1/object/public/Portfolio/Whisk_e7af2640e43f76a888a45dcf29261296eg-ezgif.com-png-to-webp-converter.webp')`,
           opacity: bgOpacity 
         }}
       />
-      <div className="fixed inset-0 z-0 bg-gradient-to-r from-background via-background/60 to-transparent pointer-events-none" />
       <div className="fixed inset-0 z-0 bg-gradient-to-b from-transparent to-black/80 pointer-events-none" />
 
       {/* Content Layer */}
