@@ -39,17 +39,17 @@ export function AboutSection() {
           whileInView={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
-          className="space-y-8"
+          className="space-y-6"
         >
-          <div className="space-y-4">
+          <div className="space-y-2">
             <span className="text-primary font-mono text-xs uppercase tracking-widest block">About Me</span>
-            <h2 className="text-5xl font-headline font-bold leading-tight">
+            <h2 className="text-3xl font-headline font-bold leading-tight">
               Shaping the Future of <br />
               <span className="text-primary">AI-Powered Creation</span>
             </h2>
           </div>
           
-          <div className="space-y-6 text-lg text-muted-foreground leading-relaxed">
+          <div className="space-y-4 text-sm text-muted-foreground leading-relaxed">
             <p>
               I am an AI Engineer currently pursuing my MSCS at UC San Diego, driven by the challenge of bridging the gap between theoretical research and scalable, real-world systems. My focus lies at the intersection of Computer Vision and Agentic AI.
             </p>
@@ -58,16 +58,16 @@ export function AboutSection() {
             </p>
           </div>
 
-          <div className="pt-8 border-t border-white/5 grid grid-cols-2 gap-8">
+          <div className="pt-6 border-t border-white/5 grid grid-cols-2 gap-8">
             <div className="space-y-1">
-              <h4 className="font-headline font-bold text-white">Education</h4>
-              <p className="text-[11px] text-muted-foreground uppercase tracking-wider font-mono">MSCS @ UC San Diego</p>
-              <p className="text-[11px] text-muted-foreground uppercase tracking-wider font-mono">B.Tech @ OUTR</p>
+              <h4 className="text-xs font-headline font-bold text-white uppercase tracking-wider">Education</h4>
+              <p className="text-[10px] text-muted-foreground uppercase tracking-widest font-mono">MSCS @ UC San Diego</p>
+              <p className="text-[10px] text-muted-foreground uppercase tracking-widest font-mono">B.Tech @ OUTR</p>
             </div>
             <div className="space-y-1">
-              <h4 className="font-headline font-bold text-white">Focus</h4>
-              <p className="text-[11px] text-muted-foreground uppercase tracking-wider font-mono">Deep Learning / Computer vision</p>
-              <p className="text-[11px] text-muted-foreground uppercase tracking-wider font-mono">Agentic AI Systems</p>
+              <h4 className="text-xs font-headline font-bold text-white uppercase tracking-wider">Focus</h4>
+              <p className="text-[10px] text-muted-foreground uppercase tracking-widest font-mono">Deep Learning / Computer vision</p>
+              <p className="text-[10px] text-muted-foreground uppercase tracking-widest font-mono">Agentic AI Systems</p>
             </div>
           </div>
         </motion.div>
