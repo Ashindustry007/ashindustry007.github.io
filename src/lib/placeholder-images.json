@@ -1,3 +1,46 @@
 {
-  "placeholderImages": []
+  "placeholderImages": [
+    {
+      "id": "avatar",
+      "description": "Portrait of Ashish Kumar Panda",
+      "imageUrl": "https://picsum.photos/seed/ashish/800/800",
+      "imageHint": "man portrait"
+    },
+    {
+      "id": "project-vocal",
+      "description": "Vocal Bio-Marker Research Visualization",
+      "imageUrl": "https://picsum.photos/seed/vocal/1200/800",
+      "imageHint": "sound waves"
+    },
+    {
+      "id": "project-transcriptomics",
+      "description": "Spatial Transcriptomics Data Analysis",
+      "imageUrl": "https://picsum.photos/seed/transcript/1200/800",
+      "imageHint": "medical data"
+    },
+    {
+      "id": "project-rag",
+      "description": "Multi-Agent Systems & RAG Architecture Diagram",
+      "imageUrl": "https://picsum.photos/seed/rag/1200/800",
+      "imageHint": "abstract tech"
+    },
+    {
+      "id": "photography-thumbnail",
+      "description": "Photography portfolio preview",
+      "imageUrl": "https://picsum.photos/seed/photo/1200/800",
+      "imageHint": "camera lens"
+    },
+    {
+      "id": "extracurricular-thumbnail",
+      "description": "Beyond the classroom activities",
+      "imageUrl": "https://picsum.photos/seed/extra/1200/800",
+      "imageHint": "adventure sport"
+    },
+    {
+      "id": "academic-thumbnail",
+      "description": "Academic foundation and courses",
+      "imageUrl": "https://picsum.photos/seed/academy/1200/800",
+      "imageHint": "university building"
+    }
+  ]
 }
