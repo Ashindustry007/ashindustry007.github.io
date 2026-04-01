@@ -52,7 +52,7 @@ export const projects = [
     imageKey: "project-retinal"
   },
   {
-    title: "Vocal Bio-Marker AI",
+    title: "Non-Invasive Vocal Bio-Marker",
     description: "Created a hybrid CRNN-Attention model for non-invasive COVID-19 screening with 97% accuracy using spectral feature extraction and Bidirectional LSTMs.",
     imageKey: "project-vocal"
   },
