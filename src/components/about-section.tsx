@@ -3,33 +3,47 @@
 
 import Image from "next/image";
 import { PlaceHolderImages } from "@/lib/placeholder-images";
+import { motion } from "framer-motion";
 
 export function AboutSection() {
   const avatar = PlaceHolderImages.find(img => img.id === "avatar");
 
   return (
     <section className="py-32 px-8 bg-background relative overflow-hidden">
-      <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-16 items-center">
-        <div className="relative group">
-          <div className="absolute -inset-4 bg-primary/20 rounded-3xl blur-2xl group-hover:bg-primary/30 transition-all duration-700" />
-          <div className="relative aspect-square rounded-2xl overflow-hidden border border-white/10 shadow-2xl">
+      <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-16 items-center">
+        <motion.div 
+          initial={{ opacity: 0, x: -20 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.8 }}
+          viewport={{ once: true }}
+          className="relative group"
+        >
+          <div className="absolute -inset-4 bg-primary/20 rounded-[2rem] blur-2xl group-hover:bg-primary/30 transition-all duration-700" />
+          <div className="relative aspect-video rounded-3xl overflow-hidden border border-white/10 shadow-2xl bg-white/[0.02]">
             {avatar?.imageUrl && (
               <Image
                 src={avatar.imageUrl}
                 alt={avatar.description || "About Ashish"}
-                width={800}
-                height={800}
-                className="object-cover object-center grayscale hover:grayscale-0 transition-all duration-700"
+                fill
+                className="object-cover object-center grayscale hover:grayscale-0 transition-all duration-700 scale-105 group-hover:scale-100"
                 data-ai-hint="man portrait"
+                priority
               />
             )}
+            <div className="absolute inset-0 bg-gradient-to-t from-background/60 via-transparent to-transparent opacity-60" />
           </div>
-        </div>
+        </motion.div>
         
-        <div className="space-y-8">
+        <motion.div 
+          initial={{ opacity: 0, x: 20 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.8 }}
+          viewport={{ once: true }}
+          className="space-y-8"
+        >
           <div className="space-y-4">
             <span className="text-primary font-mono text-xs uppercase tracking-widest block">About Me</span>
-            <h2 className="text-5xl font-headline font-bold">
+            <h2 className="text-5xl font-headline font-bold leading-tight">
               Shaping the Future of <br />
               <span className="text-primary">AI-Powered Creation</span>
             </h2>
@@ -45,18 +59,18 @@ export function AboutSection() {
           </div>
 
           <div className="pt-8 border-t border-white/5 grid grid-cols-2 gap-8">
-            <div>
-              <h4 className="font-headline font-bold text-white mb-2">Education</h4>
-              <p className="text-sm text-muted-foreground uppercase tracking-wider">MSCS @ UC San Diego</p>
-              <p className="text-sm text-muted-foreground uppercase tracking-wider">B.Tech @ OUTR</p>
+            <div className="space-y-1">
+              <h4 className="font-headline font-bold text-white">Education</h4>
+              <p className="text-[11px] text-muted-foreground uppercase tracking-wider font-mono">MSCS @ UC San Diego</p>
+              <p className="text-[11px] text-muted-foreground uppercase tracking-wider font-mono">B.Tech @ OUTR</p>
             </div>
-            <div>
-              <h4 className="font-headline font-bold text-white mb-2">Focus</h4>
-              <p className="text-sm text-muted-foreground uppercase tracking-wider">Deep Learning / RAG</p>
-              <p className="text-sm text-muted-foreground uppercase tracking-wider">Agentic AI Systems</p>
+            <div className="space-y-1">
+              <h4 className="font-headline font-bold text-white">Focus</h4>
+              <p className="text-[11px] text-muted-foreground uppercase tracking-wider font-mono">Deep Learning / RAG</p>
+              <p className="text-[11px] text-muted-foreground uppercase tracking-wider font-mono">Agentic AI Systems</p>
             </div>
           </div>
-        </div>
+        </motion.div>
       </div>
     </section>
   );
