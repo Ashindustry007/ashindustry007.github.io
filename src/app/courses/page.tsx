@@ -25,6 +25,9 @@ export default function CoursesPage() {
           opacity: bgOpacity 
         }}
       />
+      {/* Left-to-right gradient for text readability */}
+      <div className="fixed inset-0 z-0 bg-gradient-to-r from-background via-background/40 to-transparent pointer-events-none" />
+      {/* Bottom fade gradient */}
       <div className="fixed inset-0 z-0 bg-gradient-to-b from-transparent to-black/80 pointer-events-none" />
 
       {/* Wrapped Content Layer */}
