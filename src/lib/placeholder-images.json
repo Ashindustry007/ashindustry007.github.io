@@ -15,8 +15,8 @@
     {
       "id": "project-vocal",
       "description": "Vocal Bio-Marker Research Visualization",
-      "imageUrl": "https://picsum.photos/seed/audio-tech/1200/800",
-      "imageHint": "audio waveform"
+      "imageUrl": "https://picsum.photos/seed/audio-signal-processing/1200/800",
+      "imageHint": "audio signal"
     },
     {
       "id": "project-population",
