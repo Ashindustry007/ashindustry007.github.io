@@ -105,11 +105,11 @@ export function ParallaxHero() {
 
           {/* Value Proposition Block */}
           <div className="flex flex-col justify-center items-end text-right space-y-8">
-            <div className="max-w-xs space-y-3">
-              <h2 className="text-[10px] font-headline font-bold text-primary uppercase tracking-widest">
+            <div className="max-w-xs space-y-4">
+              <h2 className="text-xs font-headline font-bold text-primary uppercase tracking-widest">
                 {siteConfig.subheadline}
               </h2>
-              <p className="text-muted-foreground text-[9px] leading-relaxed opacity-70">
+              <p className="text-muted-foreground text-sm leading-relaxed opacity-80">
                 {siteConfig.intro}
               </p>
             </div>
@@ -143,7 +143,7 @@ export function ParallaxHero() {
             </div>
 
             <nav className="flex space-x-8 uppercase text-[8px] tracking-[0.2em] font-medium text-white/30">
-              <Link href="#" className="hover:text-primary transition-colors">
+              <Link href="/photography" className="hover:text-primary transition-colors">
                 Photography
               </Link>
               <Link href="/extracurriculars" className="hover:text-primary transition-colors">
