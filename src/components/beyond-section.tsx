@@ -9,12 +9,6 @@ import { ArrowUpRight } from "lucide-react";
 export function BeyondSection() {
   const categories = [
     {
-      title: "Through the Lens",
-      link: "/photography.html",
-      imageKey: "photography-thumbnail",
-      desc: "Capturing the world through cinematic photography."
-    },
-    {
       title: "Academic Foundation",
       link: "/courses.html",
       imageKey: "academic-thumbnail",
@@ -25,6 +19,12 @@ export function BeyondSection() {
       link: "/extracurricular.html",
       imageKey: "extracurricular-thumbnail",
       desc: "Adventures, sports, and life outside tech."
+    },
+    {
+      title: "Through the Lens",
+      link: "/photography.html",
+      imageKey: "photography-thumbnail",
+      desc: "Capturing the world through cinematic photography."
     }
   ];
 
