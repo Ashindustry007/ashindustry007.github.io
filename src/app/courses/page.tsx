@@ -3,7 +3,7 @@
 
 import { academicData } from "@/lib/config";
 import { Footer } from "@/components/footer";
-import { ArrowLeft, GraduationCap, Award, BookOpen, Layers, ExternalLink } from "lucide-react";
+import { ArrowLeft, Award, ExternalLink } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
