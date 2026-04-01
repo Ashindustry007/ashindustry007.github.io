@@ -22,7 +22,7 @@ export function BeyondSection() {
     },
     {
       title: "Through the Lens",
-      link: "#",
+      link: "/photography",
       imageKey: "photography-thumbnail",
       desc: "Capturing the world through cinematic photography."
     }

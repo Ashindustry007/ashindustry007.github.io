@@ -225,3 +225,15 @@ export const extracurriculars = [
     ]
   }
 ];
+
+export const photographyData = [
+  { id: "p1", title: "Urban Rhythms", location: "San Diego, CA", imageSeed: "urban-city" },
+  { id: "p2", title: "Golden Hour", location: "Coastline", imageSeed: "sunset-beach" },
+  { id: "p3", title: "Monochrome Souls", location: "Street", imageSeed: "street-portrait" },
+  { id: "p4", title: "Architectural Symmetry", location: "UCSD Campus", imageSeed: "modern-building" },
+  { id: "p5", title: "Nature's Silence", location: "National Park", imageSeed: "mountain-mist" },
+  { id: "p6", title: "Neon Nights", location: "Downtown", imageSeed: "neon-lights" },
+  { id: "p7", title: "Ethereal Landscapes", location: "Highlands", imageSeed: "valley-view" },
+  { id: "p8", title: "Candid Moments", location: "Market", imageSeed: "people-candid" },
+  { id: "p9", title: "The Blue Hour", location: "Cityscape", imageSeed: "blue-city" }
+];
