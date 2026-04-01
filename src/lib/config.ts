@@ -8,8 +8,8 @@ export const siteConfig = {
   accentColor: "#FF8000",
   socials: {
     github: "https://github.com/Ashindustry007",
-    linkedin: "https://linkedin.com",
-    instagram: "https://instagram.com"
+    linkedin: "https://linkedin.com/in/ashishkumar-panda",
+    instagram: "https://instagram.com/ashish.panda"
   },
   skills: [
     { id: "#01", label: "AI & Machine Learning" },
@@ -25,40 +25,49 @@ export const siteConfig = {
 export const experience = [
   {
     title: "AI Research Intern",
-    company: "Boolean Lab, UCSD Health",
-    description: "Developing deep learning models for healthcare diagnostics and medical image analysis."
+    company: "Boolean Lab - UCSD Health",
+    description: "Engineered self-supervised PyTorch pipelines for colon tissue analysis using Spatial Transcriptomics. Fine-tuned DINOv3-7B Transformers using LoRA, reducing memory by 75% while achieving 81% mIoU in tissue segmentation."
   },
   {
     title: "Software Engineer",
     company: "Open Financial Technologies",
-    description: "Built scalable fintech solutions and improved system throughput by 40%."
+    description: "Deployed Multi-modal AI models boosting extraction accuracy by 18% for automated invoice conversion (92% success). Engineered secure fintech solutions protecting 50K+ users with RBI-compliant risk controls."
   },
   {
-    title: "Deep Learning Intern",
+    title: "Deep Learning Research Intern",
     company: "Pucho Digital Healthcare",
-    description: "Implemented state-of-the-art NLP models for automated medical transcription."
+    description: "Accelerated mRNA vaccine screening via deep learning pipelines. Implemented Explainable AI (XAI) for cell anomaly detection in MRI scans, achieving 96.55% sensitivity for clinical decision support."
   },
   {
     title: "Data Science Intern",
     company: "Analytics Labs",
-    description: "Conducted statistical analysis and predictive modeling for consumer behavior datasets."
+    description: "Designed hybrid deep learning models for COVID-19 spread prediction with 89% forecast accuracy. Mitigated financial fraud using Genetic Algorithms and Scikit-Learn (98.5% recall)."
   }
 ];
 
 export const projects = [
   {
-    title: "Vocal Bio-Marker",
-    description: "COVID-19 screening via respiratory audio analysis using deep learning.",
+    title: "Diabetic Retinopathy Segmentation",
+    description: "Developed a Residual U-Net model for early detection of diabetic retinopathy, achieving an AUC of 0.9667 using Python, Keras, and OpenCV.",
+    imageKey: "project-retinal"
+  },
+  {
+    title: "Vocal Bio-Marker AI",
+    description: "Created a hybrid CRNN-Attention model for non-invasive COVID-19 screening with 97% accuracy using spectral feature extraction and Bidirectional LSTMs.",
     imageKey: "project-vocal"
   },
   {
-    title: "Spatial Transcriptomics",
-    description: "Cancer risk assessment models using high-resolution biological data.",
-    imageKey: "project-transcriptomics"
-  },
-  {
-    title: "Multi-Agent Systems",
-    description: "Scalable RAG architectures for enterprise-level knowledge retrieval.",
+    title: "Multi-Agent RAG Systems",
+    description: "Scalable RAG architectures for enterprise knowledge retrieval, utilizing self-attention mechanisms to prioritize relevant data points in high-dimensional space.",
     imageKey: "project-rag"
+  }
+];
+
+export const publications = [
+  {
+    title: "Odia Handwritten Numeral Recognition: A Hybrid Modelling Approach",
+    authors: "A. K. Panda, S. Dash, A. Kuanar, D. Behera and B. Panda",
+    conference: "2021 5th International Conference on Electronics, Communication and Aerospace Technology (ICECA)",
+    doi: "10.1109/ICECA52323.2021.9675980"
   }
 ];

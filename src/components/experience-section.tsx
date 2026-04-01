@@ -1,8 +1,9 @@
 
 "use client";
 
-import { experience } from "@/lib/config";
+import { experience, publications } from "@/lib/config";
 import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
+import { BookOpen } from "lucide-react";
 
 export function ExperienceSection() {
   return (
@@ -15,7 +16,7 @@ export function ExperienceSection() {
 
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
           {experience.map((item, idx) => (
-            <Card key={idx} className="bg-background border-white/5 hover:border-primary/50 transition-all duration-500 group">
+            <Card key={idx} className="bg-background border-white/5 hover:border-primary/50 transition-all duration-500 group flex flex-col">
               <CardHeader>
                 <span className="text-primary font-mono text-sm mb-2 block">0{idx + 1}</span>
                 <CardTitle className="text-xl font-headline group-hover:text-primary transition-colors">
@@ -25,7 +26,7 @@ export function ExperienceSection() {
                   {item.company}
                 </p>
               </CardHeader>
-              <CardContent>
+              <CardContent className="flex-grow">
                 <p className="text-sm text-muted-foreground leading-relaxed">
                   {item.description}
                 </p>
@@ -33,6 +34,33 @@ export function ExperienceSection() {
             </Card>
           ))}
         </div>
+
+        {publications.length > 0 && (
+          <div className="pt-16">
+            <div className="max-w-3xl mx-auto">
+              <div className="flex items-center gap-4 mb-8">
+                <div className="h-px flex-grow bg-white/10" />
+                <div className="flex items-center gap-2 text-primary">
+                  <BookOpen size={16} />
+                  <span className="text-xs font-mono uppercase tracking-widest">Publications</span>
+                </div>
+                <div className="h-px flex-grow bg-white/10" />
+              </div>
+              
+              {publications.map((pub, idx) => (
+                <div key={idx} className="text-center space-y-2">
+                  <h3 className="text-lg font-headline font-bold text-white leading-snug">
+                    "{pub.title}"
+                  </h3>
+                  <p className="text-xs text-muted-foreground italic">{pub.authors}</p>
+                  <p className="text-[10px] text-primary/60 font-mono uppercase tracking-widest">
+                    {pub.conference}
+                  </p>
+                </div>
+              ))}
+            </div>
+          </div>
+        )}
       </div>
     </section>
   );
