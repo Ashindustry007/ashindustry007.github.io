@@ -2,9 +2,9 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { siteConfig } from "@/lib/config";
+import { siteConfig, photographyData } from "@/lib/config";
 import { Footer } from "@/components/footer";
-import { ArrowLeft, Instagram, Maximize2, Loader2, ExternalLink } from "lucide-react";
+import { ArrowLeft, Instagram, ExternalLink } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
 import { motion, useScroll, useTransform, AnimatePresence } from "framer-motion";
@@ -21,7 +21,7 @@ interface InstagramPost {
 export default function PhotographyPage() {
   const [posts, setPosts] = useState<InstagramPost[]>([]);
   const [loading, setLoading] = useState(true);
-  const [error, setError] = useState(false);
+  const [isFallback, setIsFallback] = useState(false);
   
   const { scrollY } = useScroll();
   const bgOpacity = useTransform(scrollY, [0, 600], [1, 0.3]);
@@ -30,22 +30,26 @@ export default function PhotographyPage() {
     async function fetchFeed() {
       try {
         const response = await fetch('/api/instagram');
-        if (!response.ok) throw new Error('API Error');
         const data = await response.json();
-        if (data.error) throw new Error(data.error);
-        setPosts(data);
+        
+        if (response.ok && !data.error && Array.isArray(data)) {
+          setPosts(data);
+          setIsFallback(false);
+        } else {
+          // Silent fallback if API is unconfigured or fails
+          throw new Error("Unconfigured");
+        }
       } catch (err) {
-        console.error("Falling back to simulated data:", err);
-        setError(true);
-        // Fallback simulated data if API fails or token is missing
-        setPosts([
-          { id: "1", media_url: "https://picsum.photos/seed/ash-1/800/1000", permalink: "#", caption: "Golden hour in the city.", timestamp: "2024-03-20" },
-          { id: "2", media_url: "https://picsum.photos/seed/ash-2/800/1200", permalink: "#", caption: "Architectural lines.", timestamp: "2024-03-18" },
-          { id: "3", media_url: "https://picsum.photos/seed/ash-3/800/800", permalink: "#", caption: "Ocean silence.", timestamp: "2024-03-15" },
-          { id: "4", media_url: "https://picsum.photos/seed/ash-4/800/1100", permalink: "#", caption: "Urban geometry.", timestamp: "2024-03-12" },
-          { id: "5", media_url: "https://picsum.photos/seed/ash-5/800/1000", permalink: "#", caption: "Night pulse.", timestamp: "2024-03-10" },
-          { id: "6", media_url: "https://picsum.photos/seed/ash-6/800/1300", permalink: "#", caption: "Morning mist.", timestamp: "2024-03-05" },
-        ]);
+        setIsFallback(true);
+        // Fallback to high-quality curated sample data based on config
+        const fallbackPosts: InstagramPost[] = photographyData.map((item) => ({
+          id: item.id,
+          media_url: `https://picsum.photos/seed/${item.imageSeed}/800/1000`,
+          permalink: siteConfig.socials.instagram,
+          caption: `${item.title} - ${item.location}`,
+          timestamp: new Date().toISOString(),
+        }));
+        setPosts(fallbackPosts);
       } finally {
         setLoading(false);
       }
@@ -84,7 +88,7 @@ export default function PhotographyPage() {
         <section className="relative py-32 px-8 border-b border-white/5 overflow-hidden">
           <div className="relative z-10 max-w-7xl mx-auto">
             <div className="space-y-6 max-w-2xl">
-              <span className="text-primary font-mono text-xs uppercase tracking-widest block">Photography Portfolio</span>
+              <span className="text-primary font-mono text-xs uppercase tracking-widest block">Visual Narratives</span>
               <h1 className="text-5xl md:text-7xl font-headline font-bold leading-none uppercase">
                 Through <br />
                 <span className="text-outline text-transparent" style={{ WebkitTextStroke: '1px rgba(255,255,255,0.8)' }}>
@@ -92,7 +96,7 @@ export default function PhotographyPage() {
                 </span>
               </h1>
               <p className="text-sm text-muted-foreground font-mono uppercase tracking-wider max-w-lg leading-relaxed">
-                An active narrative of visual storytelling. Capturing light, geometry, and moments in between.
+                Capturing the cinematic rhythm of urban life, geometry, and the quiet moments in between.
               </p>
               
               <Link 
@@ -101,7 +105,7 @@ export default function PhotographyPage() {
                 className="inline-flex items-center gap-3 px-6 py-3 bg-white/5 border border-white/10 rounded-full text-[10px] font-mono uppercase tracking-widest hover:bg-primary hover:text-black transition-all duration-500 group"
               >
                 <Instagram size={16} className="group-hover:scale-110 transition-transform" />
-                Follow @ash.galleryyy
+                Explore @ash.galleryyy
               </Link>
             </div>
           </div>
@@ -110,10 +114,10 @@ export default function PhotographyPage() {
         {/* Gallery Grid */}
         <section className="py-24 px-8 min-h-[600px]">
           <div className="max-w-7xl mx-auto">
-            {error && !loading && (
-              <div className="mb-12 p-4 rounded-xl bg-primary/10 border border-primary/20 text-center">
-                <p className="text-[10px] font-mono uppercase tracking-widest text-primary">
-                  Viewing sample gallery (Instagram API offline)
+            {isFallback && !loading && (
+              <div className="mb-12 p-3 rounded-xl bg-primary/5 border border-primary/10 text-center">
+                <p className="text-[9px] font-mono uppercase tracking-[0.3em] text-primary/60">
+                  Viewing curated showcase (Live Instagram Feed Offline)
                 </p>
               </div>
             )}
@@ -121,10 +125,9 @@ export default function PhotographyPage() {
             <div className="columns-1 md:columns-2 lg:columns-3 gap-8 space-y-8">
               <AnimatePresence mode="popLayout">
                 {loading ? (
-                  // Skeleton Loader
                   Array.from({ length: 6 }).map((_, i) => (
                     <div key={`skeleton-${i}`} className="break-inside-avoid mb-8">
-                      <Skeleton className="w-full aspect-[4/5] rounded-2xl bg-white/5 animate-pulse" />
+                      <Skeleton className="w-full h-80 rounded-2xl bg-white/5 animate-pulse" />
                       <div className="mt-4 space-y-2">
                         <Skeleton className="h-4 w-3/4 bg-white/5" />
                         <Skeleton className="h-3 w-1/2 bg-white/5" />
@@ -146,17 +149,19 @@ export default function PhotographyPage() {
                           <motion.div
                             whileHover={{ scale: 1.02 }}
                             transition={{ duration: 0.5 }}
-                            className="relative aspect-auto"
+                            className="relative"
                           >
-                            <img
+                            <Image
                               src={post.media_url}
                               alt={post.caption}
+                              width={800}
+                              height={1000}
+                              unoptimized={true} // For external Instagram/Picsum URLs
                               className="w-full h-auto grayscale group-hover:grayscale-0 transition-all duration-700"
-                              loading="lazy"
                             />
                             
                             {/* Overlay */}
-                            <div className="absolute inset-0 bg-gradient-to-t from-black/95 via-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500 flex flex-col justify-end p-8">
+                            <div className="absolute inset-0 bg-gradient-to-t from-black via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500 flex flex-col justify-end p-8">
                               <div className="space-y-4 translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
                                 <div className="flex justify-between items-center">
                                   <div className="h-10 w-10 rounded-full bg-primary/20 border border-primary/40 flex items-center justify-center">
@@ -176,7 +181,7 @@ export default function PhotographyPage() {
                                     {new Date(post.timestamp).toLocaleDateString()}
                                   </span>
                                   <span className="text-[8px] font-mono text-primary uppercase tracking-[0.2em]">
-                                    @ash.galleryyy
+                                    CINEMATIC SERIES
                                   </span>
                                 </div>
                               </div>
