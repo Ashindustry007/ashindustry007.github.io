@@ -10,7 +10,7 @@ export function BeyondSection() {
     {
       title: "Academic Foundation",
       link: "/courses",
-      imageUrl: "https://uobfpmgknyqxdsdvqcfe.supabase.co/storage/v1/object/public/Portfolio/Whisk_9e7edf211d8733c81c5432ff8a458bebeg-ezgif.com-png-to-webp-converter.webp",
+      imageUrl: "https://uobfpmgknyqxdsdvqcfe.supabase.co/storage/v1/object/public/Portfolio/Whisk_a3792c5199b1eb7ba9f4435d6860072beg-ezgif.com-png-to-webp-converter.webp",
       imageHint: "campus library",
       desc: "Coursework and fundamental research papers."
     },
