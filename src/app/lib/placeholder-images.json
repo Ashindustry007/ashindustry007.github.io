@@ -1,4 +1,3 @@
-
 {
   "placeholderImages": [
     {
@@ -10,19 +9,19 @@
     {
       "id": "project-retinal",
       "description": "Retinal Vessel Segmentation Visualization",
-      "imageUrl": "https://picsum.photos/seed/medical-ai/1200/800",
+      "imageUrl": "https://uobfpmgknyqxdsdvqcfe.supabase.co/storage/v1/object/public/Portfolio/Whisk_e6deb04c1858e1d8757411acfc445585dr-ezgif.com-png-to-webp-converter.webp",
       "imageHint": "medical technology"
     },
     {
       "id": "project-vocal",
-      "description": "Vocal Bio-Marker Research Visualization",
-      "imageUrl": "https://picsum.photos/seed/audio-signal-processing/1200/800",
+      "description": "Non-Invasive Vocal Bio-Marker Visualization",
+      "imageUrl": "https://uobfpmgknyqxdsdvqcfe.supabase.co/storage/v1/object/public/Portfolio/Whisk_be4dbcff04e1d5581cc4ec8b816fc4aadr.png",
       "imageHint": "audio signal"
     },
     {
       "id": "project-population",
-      "description": "Deep Learning for Population Growth Prediction",
-      "imageUrl": "https://picsum.photos/seed/data-science/1200/800",
+      "description": "Population Growth Prediction Visualization",
+      "imageUrl": "https://uobfpmgknyqxdsdvqcfe.supabase.co/storage/v1/object/public/Portfolio/Whisk_a3c2231e563c5008d154be25db34c8efeg-ezgif.com-png-to-webp-converter.webp",
       "imageHint": "dna sequence"
     },
     {

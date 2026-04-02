@@ -1,4 +1,3 @@
-
 "use client";
 
 import { projects } from "@/lib/config";
@@ -36,7 +35,7 @@ export function ProjectsSection() {
                       alt={project.title}
                       fill
                       unoptimized={true}
-                      className="object-cover grayscale group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700"
+                      className="object-cover object-center grayscale group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700"
                       data-ai-hint={imgData.imageHint}
                     />
                   )}
