@@ -17,10 +17,10 @@ export function CTASection() {
           alt="CTA Background"
           fill
           unoptimized={true}
-          className="object-cover object-right grayscale group-hover:grayscale-0 transition-all duration-1000 group-hover:scale-105"
+          className="object-cover object-[95%_center] translate-x-[10%] grayscale group-hover:grayscale-0 transition-all duration-1000 group-hover:scale-105"
         />
         {/* Left-to-right gradient to ensure text legibility - pinned to left to protect text */}
-        <div className="absolute inset-0 bg-gradient-to-r from-background via-background/30 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-r from-background via-background/40 to-transparent" />
         {/* Top and bottom fades for smooth transition */}
         <div className="absolute inset-0 bg-gradient-to-b from-background via-transparent to-background" />
       </div>
