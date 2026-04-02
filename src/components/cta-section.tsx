@@ -9,18 +9,18 @@ import { motion } from "framer-motion";
 
 export function CTASection() {
   return (
-    <section className="relative py-48 px-8 bg-background border-t border-white/5 overflow-hidden">
+    <section className="relative py-48 px-8 bg-background border-t border-white/5 overflow-hidden group">
       {/* Cinematic Background Layer */}
-      <div className="absolute inset-0 z-0 opacity-40">
+      <div className="absolute inset-0 z-0 opacity-60 transition-opacity duration-700">
         <Image
           src="https://uobfpmgknyqxdsdvqcfe.supabase.co/storage/v1/object/public/Portfolio/15d1e769-a062-4f93-9554-bf19ab63428e.png"
           alt="CTA Background"
           fill
           unoptimized={true}
-          className="object-cover object-right grayscale transition-transform duration-1000 group-hover:scale-105"
+          className="object-cover object-right grayscale group-hover:grayscale-0 transition-all duration-1000 group-hover:scale-105"
         />
-        {/* Left-to-right gradient to ensure text legibility - softened for visibility */}
-        <div className="absolute inset-0 bg-gradient-to-r from-background via-background/40 to-transparent" />
+        {/* Left-to-right gradient to ensure text legibility - further softened for image visibility */}
+        <div className="absolute inset-0 bg-gradient-to-r from-background via-background/20 to-transparent" />
         {/* Top and bottom fades for smooth transition */}
         <div className="absolute inset-0 bg-gradient-to-b from-background via-transparent to-background" />
       </div>
