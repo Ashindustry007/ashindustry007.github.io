@@ -44,6 +44,8 @@ const nextConfig: NextConfig = {
   eslint: {
     ignoreDuringBuilds: true,
   },
+  // Ensure trailing slashes for static hosting
+  trailingSlash: true,
 };
 
 export default nextConfig;
