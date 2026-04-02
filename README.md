@@ -5,35 +5,36 @@ AI Engineer & MSCS Student Portfolio for Ashish Kumar Panda.
 
 ## 🚀 GitHub Pages Deployment ($0/month)
 
-This portfolio is configured for **Static Site Generation (SSG)**, allowing you to host it completely for free on GitHub Pages.
+This portfolio is configured for **Static Site Generation (SSG)**. To fix the "Exit Code 1" build error and the "6k files" issue, follow these exact steps:
 
-### 1. Prepare for Push
-Ensure your local environment is clean. If you see thousands of files in Git, it's because `node_modules` or `.next` are being tracked. Run these commands:
+### 1. Clean the Repository
+If your GitHub still shows thousands of files, run these commands in your terminal to remove the cached `node_modules`:
 ```bash
 git rm -r --cached .
 git add .
-git commit -m "Configure static export for GitHub Pages"
+git commit -m "Fix: Ignore node_modules and configure static export"
+git push origin main
 ```
 
-### 2. Deployment Steps
-1. Push your code to the `main` branch of your repository: `https://github.com/Ashindustry007/ashindustry007.github.io`.
-2. Go to your GitHub Repository **Settings > Pages**.
-3. Under **Build and deployment > Source**, select **GitHub Actions**.
-4. GitHub will automatically detect the Next.js project and provide a "Next.js" workflow template. Click **Configure**.
-5. Commit the suggested `.github/workflows/nextjs.yml` file.
-6. GitHub will now build and deploy your site automatically every time you push!
+### 2. Configure GitHub Actions
+1. Go to your GitHub Repository **Settings > Pages**.
+2. Under **Build and deployment > Source**, select **GitHub Actions**.
+3. Create a new file in your repo at `.github/workflows/deploy.yml` (you can do this in the GitHub UI or locally) and paste the following "Next.js" starter template.
 
-### 🔧 Why GitHub Pages?
+### 3. Recommended Workflow Template
+When GitHub asks you to "Configure" a Next.js workflow, ensure it uses **Node 22** to avoid deprecation warnings. The standard template provided by GitHub usually works perfectly once the `node_modules` are removed from the tracking.
+
+---
+
+## 🛠 Tech Stack
+- **Framework**: Next.js 15 (Static Export)
+- **Styling**: Tailwind CSS + ShadCN UI
+- **Animations**: Framer Motion
+- **Hosting**: GitHub Pages
+
+## 🔧 Why GitHub Pages?
 - **Truly Free**: No credit card required.
 - **Fast**: Global CDN hosting.
 - **Automated**: Deploys directly from your code.
 
 *Note: In static mode, any server-side features (like live Instagram API calls) are replaced with curated static data from `src/lib/config.ts`.*
-
----
-
-## Tech Stack
-- **Framework**: Next.js 15 (Static Export)
-- **Styling**: Tailwind CSS + ShadCN UI
-- **Animations**: Framer Motion
-- **Hosting**: GitHub Pages
