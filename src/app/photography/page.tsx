@@ -23,8 +23,7 @@ export default function PhotographyPage() {
   const [isFallback, setIsFallback] = useState(false);
   
   const { scrollY } = useScroll();
-  // Increased visibility for the photography background
-  const bgOpacity = useTransform(scrollY, [0, 600], [1, 0.4]);
+  const bgOpacity = useTransform(scrollY, [0, 400], [0.8, 0.1]);
 
   useEffect(() => {
     async function fetchFeed() {
@@ -65,7 +64,7 @@ export default function PhotographyPage() {
           opacity: bgOpacity 
         }}
       />
-      <div className="fixed inset-0 z-0 bg-gradient-to-b from-transparent to-black/60 pointer-events-none" />
+      <div className="fixed inset-0 z-0 bg-gradient-to-b from-transparent via-background/40 to-background pointer-events-none" />
 
       {/* Content Layer */}
       <div className="relative z-10">

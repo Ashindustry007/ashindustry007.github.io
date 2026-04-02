@@ -8,8 +8,7 @@ import { motion, useScroll, useTransform } from "framer-motion";
 
 export default function ExtracurricularsPage() {
   const { scrollY } = useScroll();
-  // Enhanced visibility for the background image
-  const bgOpacity = useTransform(scrollY, [0, 600], [1, 0.5]);
+  const bgOpacity = useTransform(scrollY, [0, 400], [0.8, 0.1]);
 
   const getIcon = (category: string) => {
     switch (category) {
@@ -30,9 +29,8 @@ export default function ExtracurricularsPage() {
           opacity: bgOpacity 
         }}
       />
-      {/* Heavily softened gradients for maximum image clarity */}
-      <div className="fixed inset-0 z-0 bg-gradient-to-r from-background/60 via-background/10 to-transparent pointer-events-none" />
-      <div className="fixed inset-0 z-0 bg-gradient-to-b from-transparent to-black/20 pointer-events-none" />
+      <div className="fixed inset-0 z-0 bg-gradient-to-r from-background via-background/90 to-transparent pointer-events-none" />
+      <div className="fixed inset-0 z-0 bg-gradient-to-b from-transparent to-background pointer-events-none" />
 
       {/* Wrapped Content Layer */}
       <div className="relative z-10">

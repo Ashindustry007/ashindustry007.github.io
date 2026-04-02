@@ -2,15 +2,14 @@
 
 import { academicData } from "@/lib/config";
 import { Footer } from "@/components/footer";
-import { ArrowLeft, Award, ExternalLink } from "lucide-react";
+import { ArrowLeft, Award } from "lucide-react";
 import Link from "next/link";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { motion, useScroll, useTransform } from "framer-motion";
 
 export default function CoursesPage() {
   const { scrollY } = useScroll();
-  // Increased minimum opacity for more visibility
-  const bgOpacity = useTransform(scrollY, [0, 600], [1, 0.3]);
+  const bgOpacity = useTransform(scrollY, [0, 400], [0.8, 0.1]);
 
   return (
     <main className="relative min-h-screen bg-background text-foreground selection:bg-primary selection:text-primary-foreground">
@@ -22,9 +21,8 @@ export default function CoursesPage() {
           opacity: bgOpacity 
         }}
       />
-      {/* Softened gradients for maximum image visibility */}
-      <div className="fixed inset-0 z-0 bg-gradient-to-r from-background/80 via-background/20 to-transparent pointer-events-none" />
-      <div className="fixed inset-0 z-0 bg-gradient-to-b from-transparent to-black/40 pointer-events-none" />
+      <div className="fixed inset-0 z-0 bg-gradient-to-r from-background via-background/80 to-transparent pointer-events-none" />
+      <div className="fixed inset-0 z-0 bg-gradient-to-b from-transparent to-background pointer-events-none" />
 
       {/* Wrapped Content Layer */}
       <div className="relative z-10">
