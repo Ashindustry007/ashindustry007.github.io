@@ -7,19 +7,15 @@ import { Github, Linkedin, Instagram, MousePointer2 } from "lucide-react";
 import Link from "next/link";
 import { motion } from "framer-motion";
 
-export function ParallaxHero() {
+interface ParallaxHeroProps {
+  sharedImages: HTMLImageElement[];
+}
+
+export function ParallaxHero({ sharedImages }: ParallaxHeroProps) {
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const [frameIndex, setFrameIndex] = useState(0);
-  const imagesRef = useRef<HTMLImageElement[]>([]);
 
   useEffect(() => {
-    for (let i = 0; i < siteConfig.framesCount; i++) {
-      const img = new Image();
-      const idx = i.toString().padStart(3, "0");
-      img.src = `${siteConfig.framesBaseUrl}${idx}${siteConfig.framesSuffix}`;
-      imagesRef.current[i] = img;
-    }
-
     const handleScroll = () => {
       const scrollY = window.scrollY;
       const maxScroll = window.innerHeight * 1.5;
@@ -28,38 +24,43 @@ export function ParallaxHero() {
       setFrameIndex(idx);
     };
 
-    window.addEventListener("scroll", handleScroll);
+    window.addEventListener("scroll", handleScroll, { passive: true });
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   useEffect(() => {
     const canvas = canvasRef.current;
     if (!canvas) return;
-    const ctx = canvas.getContext("2d");
+    const ctx = canvas.getContext("2d", { alpha: false }); // Optimization: disable alpha
     if (!ctx) return;
 
-    const img = imagesRef.current[frameIndex];
+    const img = sharedImages[frameIndex];
     if (img && img.complete) {
-      const canvasAspect = canvas.width / canvas.height;
-      const imgAspect = img.width / img.height;
-      let drawW, drawH, drawX, drawY;
-
-      if (canvasAspect > imgAspect) {
-        drawW = canvas.width;
-        drawH = canvas.width / imgAspect;
-        drawX = 0;
-        drawY = (canvas.height - drawH) / 2;
-      } else {
-        drawH = canvas.height;
-        drawW = canvas.height * imgAspect;
-        drawY = 0;
-        drawX = (canvas.width - drawW) / 2;
-      }
-
-      ctx.clearRect(0, 0, canvas.width, canvas.height);
-      ctx.drawImage(img, drawX, drawY, drawW, drawH);
+      renderFrame(ctx, canvas, img);
+    } else if (img) {
+      img.onload = () => renderFrame(ctx, canvas, img);
     }
-  }, [frameIndex]);
+  }, [frameIndex, sharedImages]);
+
+  const renderFrame = (ctx: CanvasRenderingContext2D, canvas: HTMLCanvasElement, img: HTMLImageElement) => {
+    const canvasAspect = canvas.width / canvas.height;
+    const imgAspect = img.width / img.height;
+    let drawW, drawH, drawX, drawY;
+
+    if (canvasAspect > imgAspect) {
+      drawW = canvas.width;
+      drawH = canvas.width / imgAspect;
+      drawX = 0;
+      drawY = (canvas.height - drawH) / 2;
+    } else {
+      drawH = canvas.height;
+      drawW = canvas.height * imgAspect;
+      drawY = 0;
+      drawX = (canvas.width - drawW) / 2;
+    }
+
+    ctx.drawImage(img, drawX, drawY, drawW, drawH);
+  };
 
   useEffect(() => {
     const handleResize = () => {
@@ -69,7 +70,7 @@ export function ParallaxHero() {
       }
     };
     handleResize();
-    window.addEventListener("resize", handleResize);
+    window.addEventListener("resize", handleResize, { passive: true });
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
@@ -83,7 +84,6 @@ export function ParallaxHero() {
         <div className="absolute inset-0 hero-gradient opacity-30" />
 
         <div className="relative z-10 grid h-full w-full grid-cols-1 md:grid-cols-2 px-12 py-16">
-          {/* Identity Block */}
           <div className="flex flex-col justify-center">
             <div className="space-y-4">
               <span className="text-primary font-mono text-[10px] uppercase tracking-[0.3em] block opacity-80">
@@ -98,7 +98,6 @@ export function ParallaxHero() {
             </div>
           </div>
 
-          {/* Value Proposition Block */}
           <div className="flex flex-col justify-center items-end text-right space-y-8">
             <div className="max-w-xs md:max-w-sm space-y-4">
               <h2 className="text-lg md:text-xl font-headline font-bold text-primary uppercase tracking-widest leading-tight">
@@ -123,28 +122,27 @@ export function ParallaxHero() {
             </div>
           </div>
 
-          {/* Socials & Navigation */}
           <div className="absolute bottom-10 left-0 w-full flex flex-col items-center space-y-8">
             <div className="flex space-x-8 text-white/20">
-              <Link href={siteConfig.socials.github} className="hover:text-primary transition-all duration-300">
+              <Link href={siteConfig.socials.github} target="_blank" className="hover:text-primary transition-all duration-300">
                 <Github size={14} />
               </Link>
-              <Link href={siteConfig.socials.linkedin} className="hover:text-primary transition-all duration-300">
+              <Link href={siteConfig.socials.linkedin} target="_blank" className="hover:text-primary transition-all duration-300">
                 <Linkedin size={14} />
               </Link>
-              <Link href={siteConfig.socials.instagram} className="hover:text-primary transition-all duration-300">
+              <Link href={siteConfig.socials.instagram} target="_blank" className="hover:text-primary transition-all duration-300">
                 <Instagram size={14} />
               </Link>
             </div>
 
             <nav className="flex space-x-8 uppercase text-[8px] tracking-[0.2em] font-medium text-white/30">
-              <Link href="/photography" className="hover:text-primary transition-colors">
+              <Link href="/photography/" className="hover:text-primary transition-colors">
                 Photography
               </Link>
-              <Link href="/extracurriculars" className="hover:text-primary transition-colors">
+              <Link href="/extracurriculars/" className="hover:text-primary transition-colors">
                 Extracurriculars
               </Link>
-              <Link href="/courses" className="hover:text-primary transition-colors">
+              <Link href="/courses/" className="hover:text-primary transition-colors">
                 Coursework
               </Link>
             </nav>
