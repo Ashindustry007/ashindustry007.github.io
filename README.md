@@ -3,86 +3,38 @@
 
 AI Engineer & MSCS Student Portfolio for Ashish Kumar Panda.
 
-## 🚀 GitHub Pages Deployment ($0/month)
+## 🚀 Vercel Deployment (Recommended)
 
-This portfolio is configured for **Static Site Generation (SSG)**. To fix the "Exit Code 1" build error and the "6k files" issue, follow these exact steps:
+This portfolio is now optimized for **Vercel** with dynamic image optimization and server-side capabilities.
 
-### 1. Clean the Git Tracking (The "6k Files" Fix)
-If your GitHub still shows thousands of files, you must remove the tracked `node_modules`. Run these commands in your terminal:
-
+### 1. Push to GitHub
+Ensure your code is pushed to a GitHub repository.
 ```bash
-# IMPORTANT: The dot (.) at the end is mandatory
-git rm -r --cached .
 git add .
-git commit -m "Fix: Ignore node_modules and configure static export"
-git push origin main --force
+git commit -m "Optimize for Vercel deployment"
+git push origin main
 ```
 
-### 2. Configure GitHub Actions
-1. Go to your GitHub Repository **Settings > Pages**.
-2. Under **Build and deployment > Source**, select **GitHub Actions**.
-3. Create a new file in your repo at `.github/workflows/deploy.yml` and paste the content below.
+### 2. Connect to Vercel
+1. Go to [vercel.com](https://vercel.com) and sign in with GitHub.
+2. Click **Add New > Project**.
+3. Import your `panda-portfolio` repository.
+4. (Optional) Add any environment variables in the **Environment Variables** section if needed.
+5. Click **Deploy**.
 
-### 3. Workflow File Content (`.github/workflows/deploy.yml`)
-Use this configuration to ensure **Node 22** is used, avoiding deprecation warnings:
-
-```yaml
-name: Deploy Next.js site to Pages
-on:
-  push:
-    branches: ["main"]
-  workflow_dispatch:
-permissions:
-  contents: read
-  pages: write
-  id-token: write
-concurrency:
-  group: "pages"
-  cancel-in-progress: false
-jobs:
-  build:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v4
-      - name: Setup Node
-        uses: actions/setup-node@v4
-        with:
-          node-version: "22"
-          cache: 'npm'
-      - name: Setup Pages
-        uses: actions/configure-pages@v5
-      - name: Install dependencies
-        run: npm ci
-      - name: Build with Next.js
-        run: npx next build
-      - name: Upload artifact
-        uses: actions/upload-pages-artifact@v3
-        with:
-          path: ./out
-  deploy:
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
-    runs-on: ubuntu-latest
-    needs: build
-    steps:
-      - name: Deploy to GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@v4
-```
+Vercel will automatically handle the build process, image optimization, and provide a global CDN for lightning-fast loading.
 
 ---
 
 ## 🛠 Tech Stack
-- **Framework**: Next.js 15 (Static Export Mode)
+- **Framework**: Next.js 15 (Dynamic Mode)
 - **Styling**: Tailwind CSS + ShadCN UI
 - **Animations**: Framer Motion
-- **Hosting**: GitHub Pages
+- **Hosting**: Vercel
 
-## 🔧 Why GitHub Pages?
-- **Truly Free**: No credit card required.
-- **Fast**: Global CDN hosting.
-- **Automated**: Deploys directly from your code.
+## 🔧 Why Vercel?
+- **Image Optimization**: Automatically resizes and compresses images on the edge.
+- **Fast Refresh**: Instant updates when you push code.
+- **Serverless**: Ready for AI features and dynamic data fetching.
 
-*Note: In static mode, server-side features are replaced with curated static data from `src/lib/config.ts` for zero-cost maintenance.*
+*Note: The cinematic 192-frame sequence is pre-buffered for maximum smoothness. Ensure a stable connection for the initial "Pre-flight" loading sequence.*

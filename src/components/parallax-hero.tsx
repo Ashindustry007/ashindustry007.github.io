@@ -37,7 +37,9 @@ export function ParallaxHero({ sharedImages }: ParallaxHeroProps) {
       drawX = (canvas.width - drawW) / 2;
     }
 
-    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    // Force draw immediately
+    ctx.fillStyle = "#0a0a0a";
+    ctx.fillRect(0, 0, canvas.width, canvas.height);
     ctx.drawImage(img, drawX, drawY, drawW, drawH);
   }, []);
 
@@ -65,8 +67,7 @@ export function ParallaxHero({ sharedImages }: ParallaxHeroProps) {
     if (img && (img.complete || img.naturalWidth > 0)) {
       renderFrame(ctx, canvas, img);
       if (canvasOpacity === 0) {
-        // Fade in canvas once we have successfully rendered at least one frame
-        requestAnimationFrame(() => setCanvasOpacity(1));
+        setCanvasOpacity(1);
       }
     }
   }, [frameIndex, sharedImages, renderFrame, canvasOpacity]);
@@ -103,7 +104,7 @@ export function ParallaxHero({ sharedImages }: ParallaxHeroProps) {
             fill
             priority
             className="object-cover opacity-100"
-            unoptimized
+            unoptimized={true} /* We keep the frame sequence unoptimized to avoid Vercel processing overhead on 192 frames */
           />
         </div>
 

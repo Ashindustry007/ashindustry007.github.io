@@ -2,9 +2,10 @@
 import type {NextConfig} from 'next';
 
 const nextConfig: NextConfig = {
-  output: 'export',
+  /* Removed output: 'export' for dynamic Vercel features */
   images: {
-    unoptimized: true,
+    /* Re-enabled image optimization for Vercel's edge network */
+    unoptimized: false,
     remotePatterns: [
       {
         protocol: 'https',
@@ -44,8 +45,6 @@ const nextConfig: NextConfig = {
   eslint: {
     ignoreDuringBuilds: true,
   },
-  // Ensure trailing slashes for static hosting
-  trailingSlash: true,
 };
 
 export default nextConfig;
