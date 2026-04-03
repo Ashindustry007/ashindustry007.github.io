@@ -23,7 +23,7 @@ export default function Home() {
     if (typeof window === "undefined") return;
 
     const totalFrames = siteConfig.framesCount;
-    const criticalThreshold = 25; // Unlock the site after these many frames
+    const criticalThreshold = 15; // Unlock even faster (at 15 frames instead of 25)
     let loadedCount = 0;
 
     const loadImage = (index: number) => {
@@ -35,14 +35,15 @@ export default function Home() {
           imagesRef.current[index] = img;
           loadedCount++;
           
-          // Update progress relative to critical threshold for the loader
           if (!criticalLoadedRef.current) {
+            // Smooth progress calculation for the first batch
             const progress = Math.min(100, Math.round((loadedCount / criticalThreshold) * 100));
             setLoadProgress(progress);
             
             if (loadedCount >= criticalThreshold) {
               criticalLoadedRef.current = true;
-              setTimeout(() => setLoading(false), 500);
+              // Add a tiny delay for a smooth fade out transition
+              setTimeout(() => setLoading(false), 300);
             }
           }
           resolve();
@@ -55,26 +56,33 @@ export default function Home() {
     };
 
     const startLoading = async () => {
-      // 1. Load critical frames first (Sequential for stability)
-      for (let i = 0; i < criticalThreshold; i++) {
-        await loadImage(i);
-      }
+      // 1. Load the very first frame immediately for instant hero visibility
+      await loadImage(0);
 
-      // 2. Load remaining frames in small background batches (Non-blocking)
-      const backgroundBatchSize = 5;
+      // 2. Load next set of critical frames in parallel for speed
+      const criticalBatch = [];
+      for (let i = 1; i < criticalThreshold; i++) {
+        criticalBatch.push(loadImage(i));
+      }
+      await Promise.all(criticalBatch);
+
+      // 3. Load remaining frames in small non-blocking background batches
+      const backgroundBatchSize = 8;
       for (let i = criticalThreshold; i < totalFrames; i += backgroundBatchSize) {
         const batch = [];
         for (let j = i; j < i + backgroundBatchSize && j < totalFrames; j++) {
           batch.push(loadImage(j));
         }
-        // Use requestIdleCallback if available, otherwise just await the batch
+        
         if ('requestIdleCallback' in window) {
           await new Promise(resolve => window.requestIdleCallback(async () => {
             await Promise.all(batch);
             resolve(null);
           }));
         } else {
+          // Fallback delay to keep UI responsive
           await Promise.all(batch);
+          await new Promise(resolve => setTimeout(resolve, 50));
         }
       }
     };
@@ -96,7 +104,7 @@ export default function Home() {
             key="content"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
-            transition={{ duration: 1.2, ease: "easeOut" }}
+            transition={{ duration: 1, ease: "easeOut" }}
           >
             <ParallaxHero sharedImages={imagesRef.current} />
             <div id="about">
