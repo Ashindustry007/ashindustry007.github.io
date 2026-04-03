@@ -11,22 +11,23 @@ import { BeyondSection } from "@/components/beyond-section";
 import { CTASection } from "@/components/cta-section";
 import { Footer } from "@/components/footer";
 import { siteConfig } from "@/lib/config";
+import { AnimatePresence } from "framer-motion";
 
 export default function Home() {
   const [loading, setLoading] = useState(true);
   const [loadProgress, setLoadProgress] = useState(0);
   const imagesRef = useRef<HTMLImageElement[]>([]);
-  const CRITICAL_BATCH = 30;
 
   useEffect(() => {
     if (typeof window === "undefined") return;
 
     let loadedCount = 0;
-    const batchSize = 5;
+    const totalFrames = siteConfig.framesCount;
+    const batchSize = 3; // Smaller batches for more consistent progress and less UI blocking
 
     const loadBatch = async (start: number, end: number) => {
       const promises = [];
-      for (let i = start; i < end && i < siteConfig.framesCount; i++) {
+      for (let i = start; i < end && i < totalFrames; i++) {
         promises.push(new Promise<void>((resolve) => {
           const img = new Image();
           const idx = i.toString().padStart(3, "0");
@@ -34,13 +35,12 @@ export default function Home() {
           img.onload = () => {
             imagesRef.current[i] = img;
             loadedCount++;
-            if (i < CRITICAL_BATCH) {
-              setLoadProgress(Math.round((loadedCount / CRITICAL_BATCH) * 100));
-            }
+            setLoadProgress(Math.round((loadedCount / totalFrames) * 100));
             resolve();
           };
           img.onerror = () => {
             loadedCount++;
+            setLoadProgress(Math.round((loadedCount / totalFrames) * 100));
             resolve();
           };
         }));
@@ -49,18 +49,15 @@ export default function Home() {
     };
 
     const startLoading = async () => {
-      // Load critical batch first in small chunks to keep UI responsive
-      for (let i = 0; i < CRITICAL_BATCH; i += batchSize) {
+      // Load all frames in batches to avoid network congestion
+      for (let i = 0; i < totalFrames; i += batchSize) {
         await loadBatch(i, i + batchSize);
       }
       
-      // Once critical batch is done, unlock the UI
-      setLoading(false);
-
-      // Continue loading the rest in the background
-      for (let i = CRITICAL_BATCH; i < siteConfig.framesCount; i += batchSize) {
-        await loadBatch(i, i + batchSize);
-      }
+      // Artificial slight delay for a smooth transition after 100%
+      setTimeout(() => {
+        setLoading(false);
+      }, 800);
     };
 
     startLoading();
@@ -68,14 +65,16 @@ export default function Home() {
 
   return (
     <main className="relative min-h-screen bg-background">
-      {loading && (
-        <LoadingScreen 
-          progress={loadProgress}
-          onComplete={() => setLoading(false)} 
-        />
-      )}
+      <AnimatePresence>
+        {loading && (
+          <LoadingScreen 
+            progress={loadProgress}
+            onComplete={() => setLoading(false)} 
+          />
+        )}
+      </AnimatePresence>
       
-      <div className={loading ? "invisible" : "visible"}>
+      <div className={loading ? "hidden" : "block"}>
         <ParallaxHero sharedImages={imagesRef.current} />
         <div id="about">
           <AboutSection />
