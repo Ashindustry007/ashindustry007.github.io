@@ -38,7 +38,6 @@ export function ParallaxHero({ sharedImages }: ParallaxHeroProps) {
       drawX = (canvas.width - drawW) / 2;
     }
 
-    // Use alpha: false optimization in context for better performance
     ctx.fillStyle = "#0a0a0a";
     ctx.fillRect(0, 0, canvas.width, canvas.height);
     ctx.drawImage(img, drawX, drawY, drawW, drawH);
@@ -51,12 +50,13 @@ export function ParallaxHero({ sharedImages }: ParallaxHeroProps) {
       const rawIdx = Math.floor((scrollY / maxScroll) * (siteConfig.framesCount - 1));
       const idx = Math.min(siteConfig.framesCount - 1, Math.max(0, rawIdx));
       
-      // Intelligent fallback: If current frame isn't loaded, stay on the last valid one
-      // This prevents the "Laggy" black frames during scrolling
+      // With Sparse Keyframe Loading, we fall back to the last loaded frame
+      // if the exact frame at current scroll position isn't buffered yet.
       if (sharedImages[idx]) {
         setFrameIndex(idx);
         lastValidFrameRef.current = idx;
       } else {
+        // Find nearest loaded frame if possible, or fallback to last valid
         setFrameIndex(lastValidFrameRef.current);
       }
     };
@@ -75,7 +75,6 @@ export function ParallaxHero({ sharedImages }: ParallaxHeroProps) {
     if (img && (img.complete || img.naturalWidth > 0)) {
       renderFrame(ctx, canvas, img);
       if (canvasOpacity === 0) {
-        // Fade in canvas only when we have a real frame to show
         setCanvasOpacity(1);
       }
     }
@@ -104,7 +103,7 @@ export function ParallaxHero({ sharedImages }: ParallaxHeroProps) {
   return (
     <div className="relative h-[250vh] w-full">
       <div className="sticky top-0 h-screen w-full overflow-hidden rounded-b-[4rem] bg-background shadow-2xl">
-        {/* Static Background Layer (Visible instantly to prevent black screen) */}
+        {/* Static Background Layer (Visible instantly) */}
         <div className="absolute inset-0 z-0">
           <Image 
             src={firstFrameUrl}

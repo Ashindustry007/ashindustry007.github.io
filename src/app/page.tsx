@@ -23,12 +23,10 @@ export default function Home() {
     if (typeof window === "undefined") return;
 
     const totalFrames = siteConfig.framesCount;
-    const criticalThreshold = 15; // Unlock the site after 15 frames for instant access
-    let loadedCount = 0;
-
+    const KEYFRAME_STEP = 8; // Load every 8th frame for the "Fast Spin" entry
+    
     const loadImage = (index: number) => {
       return new Promise<void>((resolve) => {
-        // Skip if already loading or loaded
         if (imagesRef.current[index]) {
           resolve();
           return;
@@ -39,58 +37,62 @@ export default function Home() {
         img.src = `${siteConfig.framesBaseUrl}${idx}${siteConfig.framesSuffix}`;
         img.onload = () => {
           imagesRef.current[index] = img;
-          loadedCount++;
-          
-          if (!criticalLoadedRef.current) {
-            const progress = Math.min(100, Math.round((loadedCount / criticalThreshold) * 100));
-            setLoadProgress(progress);
-            
-            if (loadedCount >= criticalThreshold) {
-              criticalLoadedRef.current = true;
-              setTimeout(() => setLoading(false), 300);
-            }
-          }
           resolve();
         };
         img.onerror = () => {
-          loadedCount++;
           resolve();
         };
       });
     };
 
     const startLoading = async () => {
-      // 1. Load the very first frame immediately for instant hero visibility
-      await loadImage(0);
-
-      // 2. Load critical frames in parallel for quick entry
-      const criticalBatch = [];
-      for (let i = 1; i < criticalThreshold; i++) {
-        criticalBatch.push(loadImage(i));
+      // 1. Identify Keyframes (0, 8, 16, 24... 192)
+      const keyframes: number[] = [];
+      for (let i = 0; i < totalFrames; i += KEYFRAME_STEP) {
+        keyframes.push(i);
       }
-      await Promise.all(criticalBatch);
+      if (keyframes[keyframes.length - 1] !== totalFrames - 1) {
+        keyframes.push(totalFrames - 1);
+      }
 
-      // 3. Load remaining frames in small "Throttled Batches"
-      // This prevents the "Laggy System" by not saturating the CPU/Network
-      const batchSize = 8;
-      for (let i = criticalThreshold; i < totalFrames; i += batchSize) {
-        const batch = [];
-        for (let j = i; j < i + batchSize && j < totalFrames; j++) {
-          batch.push(loadImage(j));
+      // 2. Load Keyframes in parallel for instant functional entry
+      let loadedKeyframes = 0;
+      const keyframePromises = keyframes.map(async (frameIdx) => {
+        await loadImage(frameIdx);
+        loadedKeyframes++;
+        const progress = Math.min(100, Math.round((loadedKeyframes / keyframes.length) * 100));
+        setLoadProgress(progress);
+      });
+
+      await Promise.all(keyframePromises);
+      
+      // 3. Unlock the site immediately after keyframes are ready
+      criticalLoadedRef.current = true;
+      setTimeout(() => setLoading(false), 300);
+
+      // 4. Silently fill in the "Gap Frames" (1-7, 9-15, etc.) in background
+      // We process these in throttled batches to prevent main-thread lag
+      const gapFrames: number[] = [];
+      for (let i = 0; i < totalFrames; i++) {
+        if (!imagesRef.current[i]) {
+          gapFrames.push(i);
         }
+      }
+
+      const batchSize = 6;
+      for (let i = 0; i < gapFrames.length; i += batchSize) {
+        const batch = gapFrames.slice(i, i + batchSize).map(loadImage);
         
-        // Wait for browser to be idle before processing the next batch
         if ('requestIdleCallback' in window) {
           await new Promise(resolve => {
-            window.requestIdleCallback(async () => {
+            (window as any).requestIdleCallback(async () => {
               await Promise.all(batch);
-              // Small delay to allow main thread to breathe
-              setTimeout(resolve, 100);
+              setTimeout(resolve, 50); // Small breath for main thread
             });
           });
         } else {
           await Promise.all(batch);
-          await new Promise(resolve => setTimeout(resolve, 200));
+          await new Promise(resolve => setTimeout(resolve, 100));
         }
       }
     };
@@ -112,7 +114,7 @@ export default function Home() {
             key="content"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
-            transition={{ duration: 1, ease: "easeOut" }}
+            transition={{ duration: 0.8, ease: "easeOut" }}
           >
             <ParallaxHero sharedImages={imagesRef.current} />
             <div id="about">
